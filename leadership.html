@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>PBL Leadership</title>
+
+    <style>
+        .kan {
+            font-family: "Kantumruy Pro";
+            font-style: normal;
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("menuButton").addEventListener("click", () => {
+                document.getElementById("mobile-menu").classList.toggle("hidden");
+            });
+        }
+
+        function toggleModal(modalId) {
+            console.log(modalId);
+            const modal = document.getElementById(modalId);
+            modal.classList.toggle('hidden');
+        }
+
+    </script>
+
+</head>
+
+<body class="kan">
+    <!-- section 1 -->
+    <div class="min-h-[800px] text-white bg-center"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),  url('leadershipAssets/splash.png'); background-size: cover;">
+        <nav class="p-3 px-12 w-full flex justify-between items-center text-white">
+            <svg width="70" height="50" class="min-w-[70px]" viewBox="0 0 123 56" fill="whiet">
+                <path
+                    d="M22.3188 21.7722V19.757C22.3188 19.757 22.2815 18.6463 22.9187 18.9037C23.5559 19.1611 23.533 19.7314 23.5086 20.8421C23.4843 21.9529 22.3188 21.7722 22.3188 21.7722Z"
+                    fill="currentColor" />
+                <path d="M22.3965 26.5422L23.7682 27.8108V23.449L22.3965 26.5422Z" fill="currentColor" />
+                <path
+                    d="M19.9208 24.5683L19.8249 18.0333C19.8249 18.0333 19.7318 16.7903 20.6511 17.1885C21.5703 17.5867 21.5961 20.3629 21.5961 20.8393V22.8858L19.9208 24.5683Z"
+                    fill="currentColor" />
+                <path
+                    d="M17.2305 22.4876L19.1892 24.2468V17.3535C19.1892 17.3535 19.1663 16.1574 18.5291 15.5473C17.892 14.9372 17.2305 15.3368 17.2305 16.321V22.4876Z"
+                    fill="currentColor" />
+                <path
+                    d="M55.1961 21.9193C54.3377 20.5792 52.348 17.2626 45.4488 16.8072C38.5496 16.3517 28.7812 16.8072 28.7812 16.8072V17.5677L34.2215 17.5175L34.1729 50.8906H28.9927V52.0281H44.768V50.8906H39.4821V34.9308C39.4821 34.9308 46.5145 36.892 52.052 33.0176C58.7377 28.3455 56.0545 23.2639 55.1961 21.9193ZM45.9795 34.3185C42.8312 35.3906 39.518 34.3185 39.518 34.3185V17.5982C39.518 17.5982 41.1715 17.3105 44.694 17.5982C48.2165 17.8858 50.5952 19.9451 50.6269 25.3449C50.6586 30.7447 49.1278 33.2442 45.9774 34.3185H45.9795Z"
+                    fill="currentColor" />
+                <path
+                    d="M88.5138 41.4599C88.2716 39.3986 87.1008 33.6958 78.09 32.9351C78.09 32.9351 86.0034 32.5417 86.8898 25.1601C86.9142 17.6517 78.5277 16.8299 78.5277 16.8299C78.5277 16.8299 77.2502 16.5239 71.5985 16.6266C65.9467 16.7293 59.7773 16.6047 59.7773 16.6047V17.42H65.3202V51.2437L59.784 51.224V51.965H70.6943C70.6943 51.965 79.3741 52.4546 82.7243 50.706C88.1672 47.8666 88.7582 43.5211 88.5138 41.4599ZM70.3766 17.4463H73.2158C73.2158 17.4463 81.549 16.0605 81.3136 25.0661C81.0914 33.3133 75.1331 32.6881 73.6779 32.6859H70.3766V17.4463ZM81.9289 47.1015C80.5093 52.6907 71.1542 51.2546 71.1542 51.2546H70.3744V33.3854C70.3744 33.3854 72.2539 33.4116 76.135 33.3854C76.6063 33.3823 77.0758 33.4433 77.5302 33.5668C83.1219 35.11 83.2886 41.7681 81.9312 47.1015H81.9289Z"
+                    fill="currentColor" />
+                <path
+                    d="M92.9863 52.0281H122.875V41.1993H122.257C122.257 41.1993 120.473 51.162 112.752 51.3884H103.595L103.627 17.2994H108.951L108.963 16.6047H92.9927V17.3324H98.3376L98.3141 51.373L92.9906 51.384L92.9863 52.0281Z"
+                    fill="currentColor" />
+                <path
+                    d="M122.874 54.833V55.3976L68.0868 55.3194L24.3692 55.2412L24.4938 18.0376L22.7956 14.6954V16.5699L17.6052 12.4143L16.2149 8.80333V48.9858L7.89453 56V17.2867L9.44807 14.5234V16.7676L14.8418 11.7857L16.0517 7.92015H16.2707L17.8744 11.8639L21.9737 15.2373V14.4067L16.2994 1.44779L16.2851 7.03698L14.2733 11.5837L9.79887 15.6952L16.2264 0L22.4663 13.973L23.0061 13.5378L24.9147 17.5341L24.9448 54.7591L68.3746 54.7961L122.874 54.833Z"
+                    fill="currentColor" />
+                <path
+                    d="M0 37.0167V40.1583C0 40.1583 7.36534 32.0362 9.36561 30.7548C11.3659 29.4734 11.5921 29.5701 11.5921 30.9923V33.7428C11.5921 33.7428 9.73932 33.5124 6.70813 36.5872C3.67694 39.6619 0 43.8403 0 43.8403V47.0246C0 47.0246 7.49277 38.4915 9.41143 37.5599C11.3301 36.6284 11.5907 37.8202 11.5921 38.8598V41.242C11.5921 41.242 11.5492 43.3425 12.8808 42.6286C14.2124 41.9147 18.7011 39.2495 20.7301 37.3224C22.759 35.3954 25.8317 32.8098 25.919 30.7235C26.0064 28.6371 26.108 27.963 25.8302 28.0057C25.5525 28.0484 24.6318 28.1721 22.6688 30.9653C20.7057 33.7584 15.8217 37.9823 14.2524 38.2184C12.6832 38.4545 12.1806 38.6948 12.2021 37.2869C12.2235 35.8789 12.2894 34.4425 12.2894 34.4425C12.2894 34.4425 13.4678 35.374 17.4569 31.5839C21.446 27.7938 26.1911 22.4521 26.6407 21.3442C27.0903 20.2363 27.0702 16.7932 26.8411 16.7363C26.612 16.6794 26.5547 16.6239 23.3689 20.4965C20.1831 24.3692 14.7965 30.5983 13.5079 30.513C12.2192 30.4277 12.6173 29.4677 12.6746 27.2349C12.7318 25.002 11.3014 25.5951 10.3579 26.4413C9.41429 27.2875 0 37.0167 0 37.0167Z"
+                    fill="#80A8BE" />
+            </svg>
+            <div class="md:hidden text-white/80">
+                <button class="duration-100 ease-in active:scale-95" id="menuButton">
+                    <svg width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 6l16 0" />
+                        <path d="M4 12l16 0" />
+                        <path d="M4 18l16 0" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden text-base font-bold md:flex gap-8 uppercase">
+                <a href="home.html" class="hover:text-blue-400 duration-150 active:scale-95 ease-in">Home</a>
+                <a href="cconsulting.html"
+                    class="hover:text-blue-400 duration-150 active:scale-95 ease-in">Consulting</a>
+                <a href="ccarrear.html" class="hover:text-blue-400 duration-150 active:scale-95 ease-in">Careers</a>
+                <a href="commities.html" class="hover:text-blue-400 duration-150 active:scale-95 ease-in">Committees</a>
+                <a href="leadership.html"
+                    class="hover:text-blue-400 duration-150 active:scale-95 ease-in">Leadership</a>
+                <a href="apply.html" class="hover:text-blue-400 duration-150 active:scale-95 ease-in">Apply</a>
+            </div>
+        </nav>
+        <div class="w-full text-xs font-bold flex flex-col items-end justify-around gap-2 uppercase hidden py-1 px-8 pb-3 md:hidden"
+            id="mobile-menu">
+            <a href="home.html" class="hover:text-blue-400 duration-150 active:scale-95 ease-in">Home</a>
+            <a href="cconsulting.html" class="hover:text-blue-400 duration-150 active:scale-95 ease-in">Consulting</a>
+            <a href="ccarrear.html" class="hover:text-blue-400 duration-150 active:scale-95 ease-in">Careers</a>
+            <a href="commities.html" class="hover:text-blue-400 duration-150 active:scale-95 ease-in">Committees</a>
+            <a href="leadership.html" class="hover:text-blue-400 duration-150 active:scale-95 ease-in">Leadership</a>
+            <a href="apply.html" class="hover:text-blue-400 duration-150 active:scale-95 ease-in">Apply</a>
+        </div>
+        <div class="w-full bg-[#27589D]/90 text-center ">
+            <p class="font-bold p-2 text-sm">
+                Applications live now! Apply by September 1 to join us for the fall semester
+            </p>
+        </div>
+
+        <div class="text-center pt-48">
+            <div class="pb-20 space-y-7 text-center">
+                <p class="text-4xl md:text-5xl font-bold">
+                    Officers
+                </p>
+                <p class="text-sm md:text-base px-8 md:px-0 md:w-1/2 mx-auto">
+                    For your first semester in PBL, you’ll be placed into one of five committees: Biotech, Consulting,
+                    Finance, Marketing, or Technology. Here, you’ll develop skills crucial for future client projects as
+                    well as learn about recruitment and trends in the respective industry. You’ll also participate in
+                    our Internal Curriculum where we’ll help you prepare your resumé, interview skills, casing skills,
+                    and whatever else you’ll need to succeed in the future.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full bg-[#D9D9D9] px-4 md:px-16">
+        <div class="bg-[#F3F3F3] p-4 md:p-12">
+            <p class="font-semibold text-4xl text-center py-8 md:py-4">Our Commities</p>
+            <div class="flex flex-col items-center gap-8 md:gap-0  md:flex-row justify-evenly py-4">
+                <button class="duration-75 ease-in active:scale-95" onclick="toggleModal('EX')">
+                    <div class="flex flex-col">
+                        <div class="space-y-4 p-4 py-12 text-center w-48 bg-white">
+                            <p class="font-bold text-6xl">EX</p>
+                            <p class="text-gray-800">Executive Board</p>
+                        </div>
+                        <img src="leadershipAssets/EXPic.png" class="resize-x w-48" alt="">
+                    </div>
+                </button>
+
+                <button class="duration-75 ease-in active:scale-95" onclick="toggleModal('PM')">
+
+                    <div class="flex flex-col">
+                        <div class="space-y-4 p-4 py-12 text-center w-48 bg-white">
+                            <p class="font-bold text-6xl">PM</p>
+                            <p class="text-gray-800">Project Managers</p>
+                        </div>
+                        <img src="leadershipAssets/PMPic.png" class="resize-x w-48" alt="">
+                    </div>
+                </button>
+
+                <button class="duration-75 ease-in active:scale-95" onclick="toggleModal('IN')">
+                    <div class="flex flex-col">
+                        <div class="space-y-4 p-4 py-12 text-center w-48 bg-white">
+                            <p class="font-bold text-6xl">IN</p>
+                            <p class="text-gray-800">Internal Networking</p>
+                        </div>
+                        <img src="leadershipAssets/INPic.png" class="resize-x w-48" alt="">
+                    </div>
+                </button>
+
+                <button class="duration-75 ease-in active:scale-95" onclick="toggleModal('MD')">
+                    <div class="flex flex-col">
+                        <div class="space-y-4 p-4 py-12 text-center w-48 bg-white">
+                            <p class="font-bold text-6xl">MD</p>
+                            <p class="text-gray-800">Media Chairs</p>
+                        </div>
+                        <img src="leadershipAssets/MDPic.png" class="resize-x w-48" alt="">
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="EX" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center"
+        onclick="toggleModal('EX')">
+        <div class="bg-white rounded-2xl shadow-lg md:w-1/2 w-11/12 min-h-[50px]">
+            <div class="w-full p-4 bg-blue-700/80 rounded-t-2xl">
+                <p class="text-white text-2xl font-semibold">Executive Board</p>
+            </div>
+
+            <div class="py-8">
+
+                <div class="flex p-4 mx-auto w-full justify-evenly pt-4">
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex p-4 mx-auto w-full justify-evenly pt-4">
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="PM" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center"
+        onclick="toggleModal('PM')">
+        <div class="bg-white rounded-2xl shadow-lg md:w-1/2 w-11/12 min-h-[50px]">
+            <div class="w-full p-4 bg-blue-700/80 rounded-t-2xl">
+                <p class="text-white text-2xl font-semibold">Project Managers</p>
+            </div>
+
+            <div class="py-8">
+
+                <div class="flex p-4 mx-auto w-full justify-evenly pt-4">
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex p-4 mx-auto w-full justify-evenly pt-4">
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="IN" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center"
+        onclick="toggleModal('IN')">
+        <div class="bg-white rounded-2xl shadow-lg md:w-1/2 w-11/12 min-h-[50px]">
+            <div class="w-full p-4 bg-blue-700/80 rounded-t-2xl">
+                <p class="text-white text-2xl font-semibold">Internal Networking</p>
+            </div>
+
+            <div class="py-8">
+
+                <div class="flex p-4 mx-auto w-full justify-evenly pt-4">
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex p-4 mx-auto w-full justify-evenly pt-4">
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="MD" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center"
+        onclick="toggleModal('MD')">
+        <div class="bg-white rounded-2xl shadow-lg md:w-1/2 w-11/12 min-h-[50px]">
+            <div class="w-full p-4 bg-blue-700/80 rounded-t-2xl">
+                <p class="text-white text-2xl font-semibold">Media Chairs</p>
+            </div>
+
+            <div class="py-8">
+
+                <div class="flex p-4 mx-auto w-full justify-evenly pt-4">
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex p-4 mx-auto w-full justify-evenly pt-4">
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="TC" class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center"
+        onclick="toggleModal('TC')">
+        <div class="bg-white rounded-2xl shadow-lg md:w-1/2 w-11/12 min-h-[50px]">
+            <div class="w-full p-4 bg-blue-700/80 rounded-t-2xl">
+                <p class="text-white text-2xl font-semibold">Executive Board</p>
+            </div>
+
+            <div class="py-8">
+
+                <div class="flex p-4 mx-auto w-full justify-evenly pt-4">
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="flex p-4 mx-auto w-full justify-evenly pt-4">
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center space-y-2">
+                        <img src="leadershipAssets/alexPP.png"
+                            class="resize-x w-[75px] md:w-[100px] rounded-xl shadow-xl" alt="">
+                        <div class="text-center">
+                            <p class="font-semibold text-sm md:text-xl">Alex Q</p>
+                            <p class="font-medium text-gray-800 text-base  md:text-lg">President</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
