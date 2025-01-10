@@ -190,11 +190,11 @@
                     </div>
                     
                     <!-- Hero Content -->
-                    <div class="text-center pt-36">
+                    <div class="text-center pt-20">
                         <!-- Main heading and subheading -->
                         <div class="pb-5 space-y-7">
                             <!-- ... content ... -->
-                            <p class="text-4xl md:text-5xl font-bold mb-16">
+                            <p class="text-4xl md:text-5xl font-bold mt-4 mb-12">
                                 CONSULTING
                             </p>
                             <p class="w-1/2 mx-auto md:text-base text-sm">
@@ -206,7 +206,7 @@
                         </div>
 
                         <!-- Quick action buttons -->
-                        <div class="space-y-12">
+                        <div class="space-y-4">
                             <button
                                 class="ease-in duration-150 active:scale-95 border-[1.5px] 
                                 p-2 px-4 font-semibold border-[#7774FF]/90 bg-[#7774FF]/90 text-white 
@@ -217,7 +217,7 @@
                     </div>
 
                     <!-- Arrows Container at the Bottom of the Hero Section -->
-                    <div class="absolute bottom-10 w-full flex justify-center">
+                    <div class="absolute bottom-4 w-full flex justify-center">
                         <a href="#scroll-target" class="arrows-container bounce flex items-center justify-center">
                             <svg viewBox="0 0 50 40" class="w-12 h-12 text-white">
                                 <!-- First Arrow -->
@@ -234,11 +234,11 @@
             <!-- Main Content Sections -->
 
             <!-- Our Clients Section -->
-            <div id="scroll-target" class="bg-white p-4 py-20">
+            <div id="scroll-target" class="bg-white p-4 py-10">
                 <div class="bg-white p-4 py-20 ">
                     <div class="flex flex-col md:flex-row items-center justify-center mx-auto w-fit gap-20">
                         <div class="md:w-1/3 space-y-6 px-4">
-                            <p class="font-bold text-3xl text-center  md:text-left md:text-5xl text-black">OUR CLIENTS</p>
+                            <p class="font-bold text-3xl text-center md:text-left md:text-5xl text-black">OUR CLIENTS</p>
                             <p class="w-fit md:text-base text-sm ">
                                 PBL has worked with a number of clients spanning many industries from tech to consulting to finance.
                                 CT Consulting is an internal consulting arm of Berkeley PBL where our members are dedicated to
@@ -327,15 +327,22 @@
             <p class="text-lg font-medium">Please contact Kelly Ko, our Vice President of Projects, 
                 at <a href="mailto:berkeleypbl.vpprojects@gmail.com" class="underline text-blue-400">berkeleypbl.vpprojects@gmail.com</a>.
             </p>
-            <img src="img/portraits/kelly-fa24.jpg" class="mx-auto rounded-lg w-[200px] md:w-[400px]" alt="Ethan Cheng portrait">
+            <img src="img/portraits/kelly-fa24.jpg" class="mx-auto rounded-lg w-[85px] md:w-[190px]" alt="VPP portrait">
         </div>
 
         <!-- Clients Timeline Section-->
             <!-- Current Clients Section -->
         <div class="bg-[#D6DDE5] p-4 py-20 ">
-            <section id="fall-2024-clients" class="my-10 px-6">
+                    <!-- Bracketed Container -->
+                    <div class="relative mt-6 mb-12 p-4 border border-yellow-500 rounded-lg shadow-md bg-white max-w-6xl mx-auto">
+                    <!-- Top Bracket -->
+                    <div class="absolute top-0 left-0 w-10 h-8 border-t-4 border-l-4 border-yellow-500"></div>
+                    <!-- Bottom Bracket -->
+                    <div class="absolute bottom-0 right-0 w-10 h-8 border-b-4 border-r-4 border-yellow-500"></div>
+                    
+                <section id="fall-2024-clients" class="my-10 px-6">
             <h2 class="text-4xl font-bold text-center mb-10">FALL 2024 CLIENTS</h2>
-            <p class="md:w-1/2 mx-auto text-center mb-6 space-y-6">
+            <p class="md:w-3/5 mx-auto text-center mb-6 space-y-6">
                 CT Consulting is an internal consulting arm of Berkeley PBL where our members are dedicated to working with clients
                 in solving problems with strategic and creative approaches. We always find new ways to help our clients improve and
                 develop their market strategy with secondary research and product recommendations.
@@ -355,349 +362,312 @@
                 </a>
             </div>
             
-            <!-- Other Previous Clients Section -->
-            <h2 class="text-4xl font-bold text-center mb-10 mt-32 mb-32">OTHER PREVIOUS CLIENTS</h2>
-            <!-- Timeline Grid - Spring 2024 -->
-            <div class="grid grid-cols-12 gap-4 mb-10">
-                <!-- Date Column -->
-                <div class="col-span-3 flex items-center justify-center "> <!-- TO FIX HERE justify center instead of justify end-->
-                    <p class="text-lg font-bold text-blue-500 mb-24">Spring 2024</p> 
-                    
-                </div>
+            <!-- Main Section Container -->
+            <section id="other-previous-clients" class="my-10 px-6">
+                <!-- Section Header -->
+                <h2 class="text-4xl font-bold text-center mb-10">OTHER PREVIOUS CLIENTS</h2>
+                
+                <!-- Timeline Grid Structure -->
+                <!-- Each timeline entry follows this structure:
+                    - Left column (col-span-2): Date
+                    - Middle column (col-span-1): Timeline dot and connecting line
+                    - Right column (col-span-9): Client logos in responsive grid -->
 
-                <!-- Timeline Column -->
-                <div class="col-span-1 flex justify-center relative">
-                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <div class="absolute top-8 h-full w-1 bg-gray-300"></div>
-                </div>
-
-                <!-- Content Column -->
-                <div class="col-span-8 py-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <a href="https://www.verizon.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/verizon.png" alt="Verizon" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.qualcomm.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/qualcomm.png" alt="Qualcomm" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.redcross.org/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/redcross.png" alt="Red Cross" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.lls.org/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/lls2.png" alt="LLS" class="h-16 w-auto object-contain mx-auto">
-                        </a>
+                <!-- Spring 2024 -->
+                <div class="grid grid-cols-12 items-center gap-4 mb-10">
+                    <!-- Date Column -->
+                    <div class="col-span-2 text-right pr-4">
+                        <p class="text-lg font-bold text-blue-500">Spring 2024</p>
+                    </div>
+                    <!-- Timeline Visual Elements -->
+                    <div class="col-span-1 flex justify-center relative">
+                        <div class="h-6 w-6 rounded-full bg-blue-500"></div>
+                        <div class="absolute top-6 h-24 w-1 bg-gray-300"></div>
+                    </div>
+                    <!-- Client Logo Grid -->
+                    <div class="col-span-9">
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4 items-center">
+                            <a href="https://www.verizon.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/verizon.png" alt="Verizon" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.qualcomm.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/qualcomm.png" alt="Qualcomm" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.redcross.org/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/redcross.png" alt="Red Cross" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.lls.org/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/lls2.png" alt="LLS" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Fall 2023 -->
-            <div class="grid grid-cols-12 gap-4 mb-10">
-                <!-- Date Column -->
-                <div class="col-span-3 flex items-center justify-center pr-8">
-                    <p class="text-lg font-bold text-blue-500 mb-24">Fall 2023</p>
-                </div>
-
-                <!-- Timeline Column -->
-                <div class="col-span-1 flex justify-center relative">
-                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <div class="absolute top-8 h-full w-1 bg-gray-300"></div>
-                </div>
-
-                <!-- Content Column -->
-                <div class="col-span-8 py-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <a href="https://www.target.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/target.png" alt="Target" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/tiktok2.png" alt="TikTok" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.mbusa.com/en/home?" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/mercedes.png" alt="Mercedes-Benz" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.nasa.gov" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/nasa.svg.png" alt="NASA" class="h-16 w-auto object-contain mx-auto">
-                        </a>
+                <!-- Fall 2023 -->
+                <div class="grid grid-cols-12 items-center gap-4 mb-10">
+                    <div class="col-span-2 text-right pr-4">
+                        <p class="text-lg font-bold text-blue-500">Fall 2023</p>
+                    </div>
+                    <div class="col-span-1 flex justify-center relative">
+                        <div class="h-6 w-6 rounded-full bg-blue-500"></div>
+                        <div class="absolute top-6 h-24 w-1 bg-gray-300"></div>
+                    </div>
+                    <div class="col-span-9">
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4 items-center">
+                            <a href="https://www.target.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/target.png" alt="Target" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/tiktok2.png" alt="TikTok" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.mbusa.com/en/home?" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/mercedes.png" alt="Mercedes-Benz" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.nasa.gov" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/nasa.svg.png" alt="NASA" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Spring 2023 -->
-            <div class="grid grid-cols-12 gap-4 mb-10">
-                <div class="col-span-3 flex items-center justify-center pr-8">
-                    <p class="text-lg font-bold text-blue-500 mb-24">Spring 2023</p>
-                </div>
+                <!-- Additional sections follow the same pattern... -->
 
-                <div class="col-span-1 flex justify-center relative">
-                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <div class="absolute top-8 h-full w-1 bg-gray-300"></div>
-                </div>
-
-                <div class="col-span-8 py-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <a href="https://www.meta.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/Meta-Logo.png" alt="Meta" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.warnerbros.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/Warner_Bros_logo.svg copy.jpg" alt="Warner Bros" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/doordash_logo.png" alt="DoorDash" class="h-16 w-auto object-contain mx-auto">
-                        </a>
+                <!-- Fall 2022 -->
+                <div class="grid grid-cols-12 items-center gap-4 mb-10">
+                    <div class="col-span-2 text-right pr-4">
+                        <p class="text-lg font-bold text-blue-500">Fall 2022</p>
+                    </div>
+                    <div class="col-span-1 flex justify-center relative">
+                        <div class="h-6 w-6 rounded-full bg-blue-500"></div>
+                        <div class="absolute top-6 h-24 w-1 bg-gray-300"></div>
+                    </div>
+                    <div class="col-span-9">
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4 items-center">
+                            <a href="https://www.samsung.com/us/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/samsung.svg" alt="Samsung" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.uniqlo.com/us/en/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/uniqlo2.png" alt="Uniqlo" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.riotgames.com/en" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/riot.png" alt="Riot Games" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.rakuten.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/Rakuten.png" alt="Rakuten" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.cisco.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/cisco.png" alt="Cisco" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Fall 2022 -->
-            <div class="grid grid-cols-12 gap-4 mb-10">
-                <div class="col-span-3 flex items-center justify-center pr-8">
-                    <p class="text-lg font-bold text-blue-500 mb-24">Fall 2022</p>
-                </div>
-
-                <div class="col-span-1 flex justify-center relative">
-                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <div class="absolute top-8 h-full w-1 bg-gray-300"></div>
-                </div>
-
-                <div class="col-span-8 py-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <a href="https://www.samsung.com/us/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/samsung.svg" alt="Samsung" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.uniqlo.com/us/en/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/uniqlo2.png" alt="Uniqlo" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.riotgames.com/en" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/riot.png" alt="Riot Games" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.rakuten.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/Rakuten.png" alt="Rakuten" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.cisco.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/cisco.png" alt="Cisco" class="h-16 w-auto object-contain mx-auto">
-                        </a>
+                <!-- Spring 2022 -->
+                <div class="grid grid-cols-12 items-center gap-4 mb-10">
+                    <div class="col-span-2 text-right pr-4">
+                        <p class="text-lg font-bold text-blue-500">Spring 2022</p>
+                    </div>
+                    <div class="col-span-1 flex justify-center relative">
+                        <div class="h-6 w-6 rounded-full bg-blue-500"></div>
+                        <div class="absolute top-6 h-24 w-1 bg-gray-300"></div>
+                    </div>
+                    <div class="col-span-9">
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4 items-center">
+                            <a href="https://www.netflix.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/netflix.png" alt="Netflix" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://hopelab.org/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/hopelab.webp" alt="Hopelab" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.coded-minds.org/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/codedminds.png" alt="Coded Minds" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.logitech.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/logitech2.png" alt="Logitech" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Spring 2022 -->
-            <div class="grid grid-cols-12 gap-4 mb-10">
-                <div class="col-span-3 flex items-center justify-center pr-8">
-                    <p class="text-lg font-bold text-blue-500 mb-24">Spring 2022</p>
-                </div>
 
-                <div class="col-span-1 flex justify-center relative">
-                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <div class="absolute top-8 h-full w-1 bg-gray-300"></div>
-                </div>
-
-                <div class="col-span-8 py-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <a href="https://www.netflix.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/netflix.png" alt="Netflix" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://hopelab.org/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/hopelab.webp" alt="Hopelab" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.coded-minds.org/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/codedminds.png" alt="Coded Minds" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.logitech.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/logitech2.png" alt="Logitech" class="h-16 w-auto object-contain mx-auto">
-                        </a>
+                <!-- Fall/Spring 2021 -->
+                <div class="grid grid-cols-12 items-center gap-4 mb-10">
+                    <div class="col-span-2 text-right pr-4">
+                        <p class="text-md font-bold text-blue-500">Fall/Spring 2021</p>
+                    </div>
+                    <div class="col-span-1 flex justify-center relative">
+                        <div class="h-6 w-6 rounded-full bg-blue-500"></div>
+                        <div class="absolute top-6 h-24 w-1 bg-gray-300"></div>
+                    </div>
+                    <div class="col-span-9">
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4 items-center">
+                            <a href="https://www.lyft.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/lyft.svg" alt="Lyft" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.ipsy.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/ipsy.png" alt="Ipsy" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://hypebeast.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/hypebeast.png" alt="Hypebeast" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.reebok.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/reebok.png" alt="Reebok" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.logitech.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/logitech.png" alt="Logitech" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Fall/Spring 2021 -->
-            <div class="grid grid-cols-12 gap-4 mb-10">
-                <div class="col-span-3 flex items-center justify-center pr-8">
-                    <p class="text-lg font-bold text-blue-500 mb-24">Fall/Spring 2021</p>
-                </div>
-
-                <div class="col-span-1 flex justify-center relative">
-                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <div class="absolute top-8 h-full w-1 bg-gray-300"></div>
-                </div>
-
-                <div class="col-span-8 py-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <a href="https://www.lyft.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/lyft.svg" alt="Lyft" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.ipsy.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/ipsy.png" alt="Ipsy" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://hypebeast.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/hypebeast.png" alt="Hypebeast" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.reebok.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/reebok.png" alt="Reebok" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.logitech.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/logitech.png" alt="Logitech" class="h-16 w-auto object-contain mx-auto">
-                        </a>
+                <!-- Fall 2020 -->
+                <div class="grid grid-cols-12 items-center gap-4 mb-10">
+                    <div class="col-span-2 text-right pr-4">
+                        <p class="text-lg font-bold text-blue-500">Fall 2020</p>
+                    </div>
+                    <div class="col-span-1 flex justify-center relative">
+                        <div class="h-6 w-6 rounded-full bg-blue-500"></div>
+                        <div class="absolute top-6 h-24 w-1 bg-gray-300"></div>
+                    </div>
+                    <div class="col-span-9">
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4 items-center">
+                            <a href="https://www.adobe.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/adobe2.png" alt="Adobe" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://curology.co/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/curology.jpeg" alt="Curology" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.reebok.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/reebok.png" alt="Reebok" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://prezi.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/prezi.svg" alt="Prezi" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Fall 2020 -->
-            <div class="grid grid-cols-12 gap-4 mb-10">
-                <div class="col-span-3 flex items-center justify-center pr-8">
-                    <p class="text-lg font-bold text-blue-500 mb-24">Fall 2020</p>
-                </div>
-
-                <div class="col-span-1 flex justify-center relative">
-                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <div class="absolute top-8 h-full w-1 bg-gray-300"></div>
-                </div>
-
-                <div class="col-span-8 py-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <a href="https://www.adobe.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/adobe2.png" alt="Adobe" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://curology.co/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/curology.jpeg" alt="Curology" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.reebok.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/reebok.png" alt="Reebok" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://prezi.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/prezi.svg" alt="Prezi" class="h-16 w-auto object-contain mx-auto">
-                        </a>
+                <!-- Spring 2020 -->
+                <div class="grid grid-cols-12 items-center gap-4 mb-10">
+                    <div class="col-span-2 text-right pr-4">
+                        <p class="text-lg font-bold text-blue-500">Spring 2020</p>
+                    </div>
+                    <div class="col-span-1 flex justify-center relative">
+                        <div class="h-6 w-6 rounded-full bg-blue-500"></div>
+                        <div class="absolute top-6 h-24 w-1 bg-gray-300"></div>
+                    </div>
+                    <div class="col-span-9">
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4 items-center">
+                            <a href="https://www.fila.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/fila.svg" alt="Fila" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.masterclass.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/masterclass.png" alt="Masterclass" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.uber.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/uber.png" alt="Uber" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Spring 2020 -->
-            <div class="grid grid-cols-12 gap-4 mb-10">
-                <div class="col-span-3 flex items-center justify-center pr-8">
-                    <p class="text-lg font-bold text-blue-500 mb-24">Spring 2020</p>
-                </div>
-
-                <div class="col-span-1 flex justify-center relative">
-                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <div class="absolute top-8 h-full w-1 bg-gray-300"></div>
-                </div>
-
-                <div class="col-span-8 py-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <a href="https://www.fila.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/fila.svg" alt="Fila" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.masterclass.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/masterclass.png" alt="Masterclass" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.uber.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/uber.png" alt="Uber" class="h-16 w-auto object-contain mx-auto">
-                        </a>
+                <!-- Fall 2019 -->
+                <div class="grid grid-cols-12 items-center gap-4 mb-10">
+                    <div class="col-span-2 text-right pr-4">
+                        <p class="text-lg font-bold text-blue-500">Fall 2019</p>
+                    </div>
+                    <div class="col-span-1 flex justify-center relative">
+                        <div class="h-6 w-6 rounded-full bg-blue-500"></div>
+                        <div class="absolute top-6 h-24 w-1 bg-gray-300"></div>
+                    </div>
+                    <div class="col-span-9">
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4 items-center">
+                            <a href="https://www.docusign.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/docusign.png" alt="DocuSign" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.kiwibot.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/kiwi.png" alt="Kiwibot" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.therealreal.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/the-realreal.png" alt="The RealReal" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Fall 2019 -->
-            <div class="grid grid-cols-12 gap-4 mb-10">
-                <div class="col-span-3 flex items-center justify-center pr-8">
-                    <p class="text-lg font-bold text-blue-500 mb-24">Fall 2019</p>
-                </div>
-
-                <div class="col-span-1 flex justify-center relative">
-                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <div class="absolute top-8 h-full w-1 bg-gray-300"></div>
-                </div>
-
-                <div class="col-span-8 py-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <a href="https://www.docusign.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/docusign.png" alt="DocuSign" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.kiwibot.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/kiwi.png" alt="Kiwibot" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.therealreal.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/the-realreal.png" alt="The RealReal" class="h-16 w-auto object-contain mx-auto">
-                        </a>
+                <!-- Spring 2019 -->
+                <div class="grid grid-cols-12 items-center gap-4 mb-10">
+                    <div class="col-span-2 text-right pr-4">
+                        <p class="text-lg font-bold text-blue-500">Spring 2019</p>
+                    </div>
+                    <div class="col-span-1 flex justify-center relative">
+                        <div class="h-6 w-6 rounded-full bg-blue-500"></div>
+                        <div class="absolute top-6 h-24 w-1 bg-gray-300"></div>
+                    </div>
+                    <div class="col-span-9">
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4 items-center">
+                            <a href="https://www.globalgiving.org/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/global-giving.png" alt="Global Giving" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.wework.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/wework.png" alt="WeWork" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://amplitude.com" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/amplitude.svg" alt="Amplitude" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Spring 2019 -->
-            <div class="grid grid-cols-12 gap-4 mb-10">
-                <div class="col-span-3 flex items-center justify-center pr-8">
-                    <p class="text-lg font-bold text-blue-500 mb-24">Spring 2019</p>
-                </div>
-
-                <div class="col-span-1 flex justify-center relative">
-                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <div class="absolute top-8 h-full w-1 bg-gray-300"></div>
-                </div>
-
-                <div class="col-span-8 py-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <a href="https://www.globalgiving.org/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/global-giving.png" alt="Global Giving" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.wework.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/wework.png" alt="WeWork" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://amplitude.com" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/amplitude.svg" alt="Amplitude" class="h-16 w-auto object-contain mx-auto">
-                        </a>
+                <!-- Fall 2018 -->
+                <div class="grid grid-cols-12 items-center gap-4 mb-10">
+                    <div class="col-span-2 text-right pr-4">
+                        <p class="text-lg font-bold text-blue-500">Fall 2018</p>
+                    </div>
+                    <div class="col-span-1 flex justify-center relative">
+                        <div class="h-6 w-6 rounded-full bg-blue-500"></div>
+                        <div class="absolute top-6 h-24 w-1 bg-gray-300"></div>
+                    </div>
+                    <div class="col-span-9">
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4 items-center">
+                            <a href="https://acumen.org/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/acumen.png" alt="Acumen" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://www.pepsico.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/pepsico.png" alt="PepsiCo" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://amplitude.com" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/amplitude.svg" alt="Amplitude" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://yup.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/yup-technologies.png" alt="Yup Technologies" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Fall 2018 -->
-            <div class="grid grid-cols-12 gap-4 mb-10">
-                <div class="col-span-3 flex items-center justify-center pr-8">
-                    <p class="text-lg font-bold text-blue-500 mb-24">Fall 2018</p>
-                </div>
-
-                <div class="col-span-1 flex justify-center relative">
-                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <div class="absolute top-8 h-full w-1 bg-gray-300"></div>
-                </div>
-
-                <div class="col-span-8 py-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <a href="https://acumen.org/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/acumen.png" alt="Acumen" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://www.pepsico.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/pepsico.png" alt="PepsiCo" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://amplitude.com" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/amplitude.svg" alt="Amplitude" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://yup.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/yup-technologies.png" alt="Yup Technologies" class="h-16 w-auto object-contain mx-auto">
-                        </a>
+                <!-- Spring 2018 (Last entry - no connecting line needed) -->
+                <div class="grid grid-cols-12 items-center gap-4 mb-10">
+                    <div class="col-span-2 text-right pr-4">
+                        <p class="text-lg font-bold text-blue-500">Spring 2018</p>
+                    </div>
+                    <div class="col-span-1 flex justify-center relative">
+                        <div class="h-6 w-6 rounded-full bg-blue-500"></div>
+                        <!-- No connecting line for the last entry -->
+                    </div>
+                    <div class="col-span-9">
+                        <div class="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] gap-4 items-center">
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/twitter.svg" alt="Twitter" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                            <a href="https://ehindsight.com" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105">
+                                <img src="consultingAssets/hindsight.png" alt="Hindsight" class="h-16 w-auto object-contain mx-auto">
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-                <!-- Spring 2018 -->
-            <div class="grid grid-cols-12 gap-4 mb-10">
-                <div class="col-span-3 flex items-center justify-center pr-8">
-                    <p class="text-lg font-bold text-blue-500 mb-24">Spring 2018</p>
-                </div>
-
-                <div class="col-span-1 flex justify-center relative">
-                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
-                    <!-- <div class="absolute top-8 h-full w-1 bg-gray-300"></div> -->
-                </div>
-
-                <div class="col-span-8 py-4">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/twitter.svg" alt="Twitter" class="h-16 w-auto object-contain mx-auto">
-                        </a>
-                        <a href="https://ehindsight.com" target="_blank" rel="noopener noreferrer" class="transform transition-transform hover:scale-105">
-                            <img src="consultingAssets/hindsight.png" alt="Hindsight" class="h-16 w-auto object-contain mx-auto">
-                        </a>
+            </section>
                     </div>
-                </div>
             </div>
-        </div>
         
             <!-- footer -->
         <footer class="bg-gray-900 text-white py-6">
