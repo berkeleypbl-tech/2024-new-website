@@ -90,10 +90,38 @@
         document.getElementById("defaultOpen").click();
     </script>
     
+        <!-- Add this at the bottom of your HTML file, just before the closing </body> tag -->
+    <script>
+        function openYear(evt, yearName) {
+            // Hide all tab content
+            const tabcontent = document.getElementsByClassName("tabcontent");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.add("hidden");
+            }
+        
+            // Remove active class from all tab links
+            const tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("bg-blue-600", "text-white");
+                tablinks[i].classList.add("text-gray-600");
+            }
+        
+            // Show the selected tab content and mark the button as active
+            document.getElementById(yearName).classList.remove("hidden");
+            evt.currentTarget.classList.remove("text-gray-600");
+            evt.currentTarget.classList.add("bg-blue-600", "text-white");
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("defaultOpen").click();
+        });
+        </script>
 </head>
 
     <body class="kan">
-        <div class="bg-[#D6DDE5] md:pb-0 pb-20">
+        <!-- changed bg to white from bg-[#D6DDE5] -->
+        <div class="bg-white md:pb-0 pb-20"> 
             <!-- Hero Section with Background Image -->
                 <div class="relative h-screen bg-center bg-cover bg-fixed text-white pt-16"
                     style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('careerAssets/careersheader.jpg');">
@@ -301,249 +329,497 @@
                     </div>
 
                     
-                <!-- Full Time Section -->
-                <div class="container mx-auto px-44">
-                    <h2 class="text-2xl font-bold mb-4 mt-8">2023 Full Time</h2>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full table-auto">
-                            <thead class="bg-gray-800 text-white">
-                                <tr>
-                                    <th class="px-4 py-2 text-left">Name</th>
-                                    <th class="px-4 py-2 text-left">Company</th>
-                                    <th class="px-4 py-2 text-left">Position</th>
-                                    <th class="px-4 py-2 text-left">Location</th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
-                                <!-- Consulting Section -->
-                                <tr class="bg-gray-100">
-                                    <td colspan="4" class="px-4 py-2 font-semibold">Consulting</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2">Armaan Tiwana</td>
-                                    <td class="px-4 py-2">ClearView Healthcare Partners</td>
-                                    <td class="px-4 py-2">Strategy Consultant</td>
-                                    <td class="px-4 py-2">New York, NY</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2">Eddie Liu</td>
-                                    <td class="px-4 py-2">EY-Parthenon</td>
-                                    <td class="px-4 py-2">Strategy Consultant</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2">Hamayl Cheema</td>
-                                    <td class="px-4 py-2">Deloitte</td>
-                                    <td class="px-4 py-2">Strategy Consultant</td>
-                                    <td class="px-4 py-2">New York, NY</td>
-                                </tr>
-                                <!-- Finance Section -->
-                                <tr class="bg-gray-100">
-                                    <td colspan="4" class="px-4 py-2 font-semibold">Finance</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2">Alexandre Lavoie</td>
-                                    <td class="px-4 py-2">First Republic Bank</td>
-                                    <td class="px-4 py-2">Private Wealth Management Banking Associate</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                </tr>
-                                <!-- Technology Section -->
-                                <tr class="bg-gray-100">
-                                    <td colspan="4" class="px-4 py-2 font-semibold">Technology</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2">Amy Zhong</td>
-                                    <td class="px-4 py-2">Samsara</td>
-                                    <td class="px-4 py-2">Associate Product Manager</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Blayden Lee</td>
-                                    <td class="px-4 py-2">Amazon</td>
-                                    <td class="px-4 py-2">Software Development Engineer</td>
-                                    <td class="px-4 py-2">Cupertino, CA</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Christine Liu</td>
-                                    <td class="px-4 py-2">Linkedin</td>
-                                    <td class="px-4 py-2">Strategy, Operations, and Analytics Analyst</td>
-                                    <td class="px-4 py-2">Sunnyvale, CA</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Eden Chun</td>
-                                    <td class="px-4 py-2">Amazon</td>
-                                    <td class="px-4 py-2">Program Manager</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Jason Tao</td>
-                                    <td class="px-4 py-2">Scale AI</td>
-                                    <td class="px-4 py-2">Software Engineer</td>
-                                    <td class="px-4 py-2">New York, NY</td>
-                                  </tr>
-                                <!-- Add more rows for Technology and other sections as needed -->
-                            </tbody>
-                        </table>
-                    </div>
+            <!-- Full Time Section -->
+                <!-- Tab Content -->
+                <div id="2023" class="tabcontent">
+                        <div class="container mx-auto px-44">
+                            <h2 class="text-2xl font-bold mb-4 mt-8">2023 Full Time</h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full table-auto">
+                                    <thead class="bg-gray-800 text-white">
+                                        <tr>
+                                            <th class="px-4 py-2 text-left">Name</th>
+                                            <th class="px-4 py-2 text-left">Company</th>
+                                            <th class="px-4 py-2 text-left">Position</th>
+                                            <th class="px-4 py-2 text-left">Location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200">
+                                        <!-- Consulting Section -->
+                                        <tr class="bg-gray-100">
+                                            <td colspan="4" class="px-4 py-2 font-semibold">Consulting</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Armaan Tiwana</td>
+                                            <td class="px-4 py-2">ClearView Healthcare Partners</td>
+                                            <td class="px-4 py-2">Strategy Consultant</td>
+                                            <td class="px-4 py-2">New York, NY</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Eddie Liu</td>
+                                            <td class="px-4 py-2">EY-Parthenon</td>
+                                            <td class="px-4 py-2">Strategy Consultant</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Hamayl Cheema</td>
+                                            <td class="px-4 py-2">Deloitte</td>
+                                            <td class="px-4 py-2">Strategy Consultant</td>
+                                            <td class="px-4 py-2">New York, NY</td>
+                                        </tr>
+                                        <!-- Finance Section -->
+                                        <tr class="bg-gray-100">
+                                            <td colspan="4" class="px-4 py-2 font-semibold">Finance</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Alexandre Lavoie</td>
+                                            <td class="px-4 py-2">First Republic Bank</td>
+                                            <td class="px-4 py-2">Private Wealth Management Banking Associate</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <!-- Technology Section -->
+                                        <tr class="bg-gray-100">
+                                            <td colspan="4" class="px-4 py-2 font-semibold">Technology</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Amy Zhong</td>
+                                            <td class="px-4 py-2">Samsara</td>
+                                            <td class="px-4 py-2">Associate Product Manager</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Blayden Lee</td>
+                                            <td class="px-4 py-2">Amazon</td>
+                                            <td class="px-4 py-2">Software Development Engineer</td>
+                                            <td class="px-4 py-2">Cupertino, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Christine Liu</td>
+                                            <td class="px-4 py-2">Linkedin</td>
+                                            <td class="px-4 py-2">Strategy, Operations, and Analytics Analyst</td>
+                                            <td class="px-4 py-2">Sunnyvale, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Eden Chun</td>
+                                            <td class="px-4 py-2">Amazon</td>
+                                            <td class="px-4 py-2">Program Manager</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Jason Tao</td>
+                                            <td class="px-4 py-2">Scale AI</td>
+                                            <td class="px-4 py-2">Software Engineer</td>
+                                            <td class="px-4 py-2">New York, NY</td>
+                                        </tr>
+                                        <!-- Add more rows for Technology and other sections as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
 
-                    <h2 class="text-2xl font-bold mt-8 mb-4">2023 Internships</h2>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full table-auto">
-                            <thead class="bg-gray-800 text-white">
-                                <tr>
-                                    <th class="px-4 py-2 text-left">Name</th>
-                                    <th class="px-4 py-2 text-left">Company</th>
-                                    <th class="px-4 py-2 text-left">Position</th>
-                                    <th class="px-4 py-2 text-left">Location</th>
-                                </tr>
-                            </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
-                                <!-- Consulting Section -->
-                                <tr class="bg-gray-100">
-                                    <td colspan="4" class="px-4 py-2 font-semibold">Consulting</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2">Alice Han</td>
-                                    <td class="px-4 py-2">ZS Associates</td>
-                                    <td class="px-4 py-2">Strategy Consultant</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Christine Xu</td>
-                                    <td class="px-4 py-2">Ernst &amp; Young</td>
-                                    <td class="px-4 py-2">Enterprise Risk Consultant</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Erin Lakshmanan</td>
-                                    <td class="px-4 py-2">Boston Consulting Group</td>
-                                    <td class="px-4 py-2">Management Consultant</td>
-                                    <td class="px-4 py-2">Kuala Lumpur, MY</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Jocelyn Quach</td>
-                                    <td class="px-4 py-2">Ernst &amp; Young</td>
-                                    <td class="px-4 py-2">Risk Consultant</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Nathaniel Alvarado</td>
-                                    <td class="px-4 py-2">Ernst &amp; Young</td>
-                                    <td class="px-4 py-2">M&A Consultant</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                  </tr>
-                                  <!-- Finance Section -->
-                                <tr class="bg-gray-100">
-                                    <td colspan="4" class="px-4 py-2 font-semibold">Finance</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2">Carrie Ho</td>
-                                    <td class="px-4 py-2">Citi</td>
-                                    <td class="px-4 py-2">Treasury and Trade Solutions <br> Analyst</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Casey Shu</td>
-                                    <td class="px-4 py-2">J.P. Morgan Chase & Co.</td>
-                                    <td class="px-4 py-2">Global Finance and Business Management Analyst</td>
-                                    <td class="px-4 py-2">New York, NY</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Josie Nieh</td>
-                                    <td class="px-4 py-2">Morgan Stanley</td>
-                                    <td class="px-4 py-2">Wealth Management Analyst</td>
-                                    <td class="px-4 py-2">New York, NY</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Justin Oh</td>
-                                    <td class="px-4 py-2">Leerink Partners</td>
-                                    <td class="px-4 py-2">Investment Banking Analyst</td>
-                                    <td class="px-4 py-2">New York, NY</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Sahil Malhotra</td>
-                                    <td class="px-4 py-2">Sumitomo Mitsui Banking Corporation</td>
-                                    <td class="px-4 py-2">Investment Banking Analyst</td>
-                                    <td class="px-4 py-2">New York, NY</td>
-                                  </tr>
-                                <!-- Health Care Section -->
-                                <tr class="bg-gray-100">
-                                    <td colspan="4" class="px-4 py-2 font-semibold">Healthcare</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2">Ishan Dogra</td>
-                                    <td class="px-4 py-2">Abbott</td>
-                                    <td class="px-4 py-2">Operations Intern</td>
-                                    <td class="px-4 py-2">Chicago, IL</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Nathan Setokusumo</td>
-                                    <td class="px-4 py-2">Varian Medical Systems</td>
-                                    <td class="px-4 py-2">Finance Analyst</td>
-                                    <td class="px-4 py-2">Palo Alto, CA</td>
-                                  </tr>
-                                  <!-- Technology Section -->
-                                <tr class="bg-gray-100">
-                                    <td colspan="4" class="px-4 py-2 font-semibold">Technology</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2">Alexander Jang</td>
-                                    <td class="px-4 py-2">Ford Motor Company</td>
-                                    <td class="px-4 py-2">Software Engineer Intern</td>
-                                    <td class="px-4 py-2">Detroit, MI</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Alyson Chang</td>
-                                    <td class="px-4 py-2">Okta</td>
-                                    <td class="px-4 py-2">Technical Project Manager Intern</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Amitoj Singh</td>
-                                    <td class="px-4 py-2">Celestial AI</td>
-                                    <td class="px-4 py-2">Machine Learning Engineer Intern</td>
-                                    <td class="px-4 py-2">Santa Clara, CA</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Prokkawn Majumdar</td>
-                                    <td class="px-4 py-2">CrowdStrike</td>
-                                    <td class="px-4 py-2">Software Engineer Intern</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">William Lee</td>
-                                    <td class="px-4 py-2">Autodesk</td>
-                                    <td class="px-4 py-2">Software Engineer Intern</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                  </tr>
-                                <!-- Other Industry Section -->
-                                <tr class="bg-gray-100">
-                                    <td colspan="4" class="px-4 py-2 font-semibold">Other Industries</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-4 py-2">Allyson Chen</td>
-                                    <td class="px-4 py-2">Nestlé</td>
-                                    <td class="px-4 py-2">Sales Analyst</td>
-                                    <td class="px-4 py-2">Jonesboro, AR</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Matthew Ahn</td>
-                                    <td class="px-4 py-2">Okta</td>
-                                    <td class="px-4 py-2">Customer Success Intern</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                  </tr>
-                                  <tr>
-                                    <td class="px-4 py-2">Samantha Wang</td>
-                                    <td class="px-4 py-2">Protiviti</td>
-                                    <td class="px-4 py-2">Risk & Compliance Solutions Intern</td>
-                                    <td class="px-4 py-2">San Francisco, CA</td>
-                                  </tr>
-                                <!-- Add more rows for other sections as needed -->
-                            </tbody>
-                        </table>
+                            <h2 class="text-2xl font-bold mt-8 mb-4">2023 Internships</h2>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full table-auto">
+                                    <thead class="bg-gray-800 text-white">
+                                        <tr>
+                                            <th class="px-4 py-2 text-left">Name</th>
+                                            <th class="px-4 py-2 text-left">Company</th>
+                                            <th class="px-4 py-2 text-left">Position</th>
+                                            <th class="px-4 py-2 text-left">Location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200">
+                                        <!-- Consulting Section -->
+                                        <tr class="bg-gray-100">
+                                            <td colspan="4" class="px-4 py-2 font-semibold">Consulting</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Alice Han</td>
+                                            <td class="px-4 py-2">ZS Associates</td>
+                                            <td class="px-4 py-2">Strategy Consultant</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Christine Xu</td>
+                                            <td class="px-4 py-2">Ernst &amp; Young</td>
+                                            <td class="px-4 py-2">Enterprise Risk Consultant</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Erin Lakshmanan</td>
+                                            <td class="px-4 py-2">Boston Consulting Group</td>
+                                            <td class="px-4 py-2">Management Consultant</td>
+                                            <td class="px-4 py-2">Kuala Lumpur, MY</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Jocelyn Quach</td>
+                                            <td class="px-4 py-2">Ernst &amp; Young</td>
+                                            <td class="px-4 py-2">Risk Consultant</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Nathaniel Alvarado</td>
+                                            <td class="px-4 py-2">Ernst &amp; Young</td>
+                                            <td class="px-4 py-2">M&A Consultant</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <!-- Finance Section -->
+                                        <tr class="bg-gray-100">
+                                            <td colspan="4" class="px-4 py-2 font-semibold">Finance</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Carrie Ho</td>
+                                            <td class="px-4 py-2">Citi</td>
+                                            <td class="px-4 py-2">Treasury and Trade Solutions <br> Analyst</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Casey Shu</td>
+                                            <td class="px-4 py-2">J.P. Morgan Chase & Co.</td>
+                                            <td class="px-4 py-2">Global Finance and Business Management Analyst</td>
+                                            <td class="px-4 py-2">New York, NY</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Josie Nieh</td>
+                                            <td class="px-4 py-2">Morgan Stanley</td>
+                                            <td class="px-4 py-2">Wealth Management Analyst</td>
+                                            <td class="px-4 py-2">New York, NY</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Justin Oh</td>
+                                            <td class="px-4 py-2">Leerink Partners</td>
+                                            <td class="px-4 py-2">Investment Banking Analyst</td>
+                                            <td class="px-4 py-2">New York, NY</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Sahil Malhotra</td>
+                                            <td class="px-4 py-2">Sumitomo Mitsui Banking Corporation</td>
+                                            <td class="px-4 py-2">Investment Banking Analyst</td>
+                                            <td class="px-4 py-2">New York, NY</td>
+                                        </tr>
+                                        <!-- Health Care Section -->
+                                        <tr class="bg-gray-100">
+                                            <td colspan="4" class="px-4 py-2 font-semibold">Healthcare</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Ishan Dogra</td>
+                                            <td class="px-4 py-2">Abbott</td>
+                                            <td class="px-4 py-2">Operations Intern</td>
+                                            <td class="px-4 py-2">Chicago, IL</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Nathan Setokusumo</td>
+                                            <td class="px-4 py-2">Varian Medical Systems</td>
+                                            <td class="px-4 py-2">Finance Analyst</td>
+                                            <td class="px-4 py-2">Palo Alto, CA</td>
+                                        </tr>
+                                        <!-- Technology Section -->
+                                        <tr class="bg-gray-100">
+                                            <td colspan="4" class="px-4 py-2 font-semibold">Technology</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Alexander Jang</td>
+                                            <td class="px-4 py-2">Ford Motor Company</td>
+                                            <td class="px-4 py-2">Software Engineer Intern</td>
+                                            <td class="px-4 py-2">Detroit, MI</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Alyson Chang</td>
+                                            <td class="px-4 py-2">Okta</td>
+                                            <td class="px-4 py-2">Technical Project Manager Intern</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Amitoj Singh</td>
+                                            <td class="px-4 py-2">Celestial AI</td>
+                                            <td class="px-4 py-2">Machine Learning Engineer Intern</td>
+                                            <td class="px-4 py-2">Santa Clara, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Prokkawn Majumdar</td>
+                                            <td class="px-4 py-2">CrowdStrike</td>
+                                            <td class="px-4 py-2">Software Engineer Intern</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">William Lee</td>
+                                            <td class="px-4 py-2">Autodesk</td>
+                                            <td class="px-4 py-2">Software Engineer Intern</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <!-- Other Industry Section -->
+                                        <tr class="bg-gray-100">
+                                            <td colspan="4" class="px-4 py-2 font-semibold">Other Industries</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Allyson Chen</td>
+                                            <td class="px-4 py-2">Nestlé</td>
+                                            <td class="px-4 py-2">Sales Analyst</td>
+                                            <td class="px-4 py-2">Jonesboro, AR</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Matthew Ahn</td>
+                                            <td class="px-4 py-2">Okta</td>
+                                            <td class="px-4 py-2">Customer Success Intern</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 py-2">Samantha Wang</td>
+                                            <td class="px-4 py-2">Protiviti</td>
+                                            <td class="px-4 py-2">Risk & Compliance Solutions Intern</td>
+                                            <td class="px-4 py-2">San Francisco, CA</td>
+                                        </tr>
+                                        <!-- Add more rows for other sections as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div id="2022" class="tabcontent">
+                    <div class="container mx-auto px-44">
+                        <h2 class="text-2xl font-bold mb-4 mt-8">2023 Full Time</h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full table-auto">
+                                <thead class="bg-gray-800 text-white">
+                                    <tr>
+                                        <th class="px-4 py-2 text-left">Name</th>
+                                        <th class="px-4 py-2 text-left">Company</th>
+                                        <th class="px-4 py-2 text-left">Position</th>
+                                        <th class="px-4 py-2 text-left">Location</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <!-- Consulting Section -->
+                                    <tr class="bg-gray-100">
+                                        <td colspan="4" class="px-4 py-2 font-semibold">Consulting</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Armaan Tiwana</td>
+                                        <td class="px-4 py-2">ClearView Healthcare Partners</td>
+                                        <td class="px-4 py-2">Strategy Consultant</td>
+                                        <td class="px-4 py-2">New York, NY</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Eddie Liu</td>
+                                        <td class="px-4 py-2">EY-Parthenon</td>
+                                        <td class="px-4 py-2">Strategy Consultant</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Hamayl Cheema</td>
+                                        <td class="px-4 py-2">Deloitte</td>
+                                        <td class="px-4 py-2">Strategy Consultant</td>
+                                        <td class="px-4 py-2">New York, NY</td>
+                                    </tr>
+                                    <!-- Finance Section -->
+                                    <tr class="bg-gray-100">
+                                        <td colspan="4" class="px-4 py-2 font-semibold">Finance</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Alexandre Lavoie</td>
+                                        <td class="px-4 py-2">First Republic Bank</td>
+                                        <td class="px-4 py-2">Private Wealth Management Banking Associate</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <!-- Technology Section -->
+                                    <tr class="bg-gray-100">
+                                        <td colspan="4" class="px-4 py-2 font-semibold">Technology</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Amy Zhong</td>
+                                        <td class="px-4 py-2">Samsara</td>
+                                        <td class="px-4 py-2">Associate Product Manager</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Blayden Lee</td>
+                                        <td class="px-4 py-2">Amazon</td>
+                                        <td class="px-4 py-2">Software Development Engineer</td>
+                                        <td class="px-4 py-2">Cupertino, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Christine Liu</td>
+                                        <td class="px-4 py-2">Linkedin</td>
+                                        <td class="px-4 py-2">Strategy, Operations, and Analytics Analyst</td>
+                                        <td class="px-4 py-2">Sunnyvale, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Eden Chun</td>
+                                        <td class="px-4 py-2">Amazon</td>
+                                        <td class="px-4 py-2">Program Manager</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Jason Tao</td>
+                                        <td class="px-4 py-2">Scale AI</td>
+                                        <td class="px-4 py-2">Software Engineer</td>
+                                        <td class="px-4 py-2">New York, NY</td>
+                                    </tr>
+                                    <!-- Add more rows for Technology and other sections as needed -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2 class="text-2xl font-bold mt-8 mb-4">2023 Internships</h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full table-auto">
+                                <thead class="bg-gray-800 text-white">
+                                    <tr>
+                                        <th class="px-4 py-2 text-left">Name</th>
+                                        <th class="px-4 py-2 text-left">Company</th>
+                                        <th class="px-4 py-2 text-left">Position</th>
+                                        <th class="px-4 py-2 text-left">Location</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200">
+                                    <!-- Consulting Section -->
+                                    <tr class="bg-gray-100">
+                                        <td colspan="4" class="px-4 py-2 font-semibold">Consulting</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Alice Han</td>
+                                        <td class="px-4 py-2">ZS Associates</td>
+                                        <td class="px-4 py-2">Strategy Consultant</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Christine Xu</td>
+                                        <td class="px-4 py-2">Ernst &amp; Young</td>
+                                        <td class="px-4 py-2">Enterprise Risk Consultant</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Erin Lakshmanan</td>
+                                        <td class="px-4 py-2">Boston Consulting Group</td>
+                                        <td class="px-4 py-2">Management Consultant</td>
+                                        <td class="px-4 py-2">Kuala Lumpur, MY</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Jocelyn Quach</td>
+                                        <td class="px-4 py-2">Ernst &amp; Young</td>
+                                        <td class="px-4 py-2">Risk Consultant</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Nathaniel Alvarado</td>
+                                        <td class="px-4 py-2">Ernst &amp; Young</td>
+                                        <td class="px-4 py-2">M&A Consultant</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <!-- Finance Section -->
+                                    <tr class="bg-gray-100">
+                                        <td colspan="4" class="px-4 py-2 font-semibold">Finance</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Carrie Ho</td>
+                                        <td class="px-4 py-2">Citi</td>
+                                        <td class="px-4 py-2">Treasury and Trade Solutions <br> Analyst</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Casey Shu</td>
+                                        <td class="px-4 py-2">J.P. Morgan Chase & Co.</td>
+                                        <td class="px-4 py-2">Global Finance and Business Management Analyst</td>
+                                        <td class="px-4 py-2">New York, NY</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Josie Nieh</td>
+                                        <td class="px-4 py-2">Morgan Stanley</td>
+                                        <td class="px-4 py-2">Wealth Management Analyst</td>
+                                        <td class="px-4 py-2">New York, NY</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Justin Oh</td>
+                                        <td class="px-4 py-2">Leerink Partners</td>
+                                        <td class="px-4 py-2">Investment Banking Analyst</td>
+                                        <td class="px-4 py-2">New York, NY</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Sahil Malhotra</td>
+                                        <td class="px-4 py-2">Sumitomo Mitsui Banking Corporation</td>
+                                        <td class="px-4 py-2">Investment Banking Analyst</td>
+                                        <td class="px-4 py-2">New York, NY</td>
+                                    </tr>
+                                    <!-- Health Care Section -->
+                                    <tr class="bg-gray-100">
+                                        <td colspan="4" class="px-4 py-2 font-semibold">Healthcare</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Ishan Dogra</td>
+                                        <td class="px-4 py-2">Abbott</td>
+                                        <td class="px-4 py-2">Operations Intern</td>
+                                        <td class="px-4 py-2">Chicago, IL</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Nathan Setokusumo</td>
+                                        <td class="px-4 py-2">Varian Medical Systems</td>
+                                        <td class="px-4 py-2">Finance Analyst</td>
+                                        <td class="px-4 py-2">Palo Alto, CA</td>
+                                    </tr>
+                                    <!-- Technology Section -->
+                                    <tr class="bg-gray-100">
+                                        <td colspan="4" class="px-4 py-2 font-semibold">Technology</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Alexander Jang</td>
+                                        <td class="px-4 py-2">Ford Motor Company</td>
+                                        <td class="px-4 py-2">Software Engineer Intern</td>
+                                        <td class="px-4 py-2">Detroit, MI</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Alyson Chang</td>
+                                        <td class="px-4 py-2">Okta</td>
+                                        <td class="px-4 py-2">Technical Project Manager Intern</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Amitoj Singh</td>
+                                        <td class="px-4 py-2">Celestial AI</td>
+                                        <td class="px-4 py-2">Machine Learning Engineer Intern</td>
+                                        <td class="px-4 py-2">Santa Clara, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Prokkawn Majumdar</td>
+                                        <td class="px-4 py-2">CrowdStrike</td>
+                                        <td class="px-4 py-2">Software Engineer Intern</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">William Lee</td>
+                                        <td class="px-4 py-2">Autodesk</td>
+                                        <td class="px-4 py-2">Software Engineer Intern</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <!-- Other Industry Section -->
+                                    <tr class="bg-gray-100">
+                                        <td colspan="4" class="px-4 py-2 font-semibold">Other Industries</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Allyson Chen</td>
+                                        <td class="px-4 py-2">Nestlé</td>
+                                        <td class="px-4 py-2">Sales Analyst</td>
+                                        <td class="px-4 py-2">Jonesboro, AR</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Matthew Ahn</td>
+                                        <td class="px-4 py-2">Okta</td>
+                                        <td class="px-4 py-2">Customer Success Intern</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2">Samantha Wang</td>
+                                        <td class="px-4 py-2">Protiviti</td>
+                                        <td class="px-4 py-2">Risk & Compliance Solutions Intern</td>
+                                        <td class="px-4 py-2">San Francisco, CA</td>
+                                    </tr>
+                                    <!-- Add more rows for other sections as needed -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
+            </div>
                 
                 
                 <!-- footer -->
