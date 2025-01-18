@@ -65,6 +65,30 @@
             }
         });
     </script>
+    <script>
+        document.querySelectorAll('[data-accordion-target]').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-accordion-target');
+                const targetElement = document.querySelector(targetId);
+    
+                if (targetElement) {
+                    // Toggle the hidden class
+                    targetElement.classList.toggle('hidden');
+    
+                    // Update the aria-expanded attribute
+                    const isExpanded = targetElement.classList.contains('hidden');
+                    button.setAttribute('aria-expanded', !isExpanded);
+    
+                    // Rotate the icon
+                    const icon = button.querySelector('svg');
+                    if (icon) {
+                        icon.classList.toggle('rotate-180');
+                    }
+                }
+            });
+        });
+    </script>
+    
 </head>
 
     <body class="kan">
@@ -243,8 +267,9 @@
                     
                 <section id="fall-2024-clients" class="my-10 px-6">
                     <!-- COMPLETED CONTAINER HERE -->
-
-                <div class="bg-white px-10 py-8">
+                
+                    <!-- Recruitment Timeline -->
+                <div class="bg-white px-12 py-8">
                     <div class="bg-white p-12 mx-auto text-center w-fit space-y-4">
                         <p class="text-4xl font-bold">RECRUITMENT TIMELINE</p> <!--changed from semi bold -->
                         <p>Fill out this form to be added to our mailing list for recruitment-related events </p>
@@ -255,128 +280,122 @@
                             Interest Form
                         </button>
                     </div>
-                    <div class="mx-auto w-fit pb-8">
-                        <ol class="relative border-s border-gray-200 dark:border-gray-700">
-                            <li class="mb-10 ms-4">
-                                <div
-                                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                                </div>
-                                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 30
-                                    2024</time>
-                                <h3 class="text-3xl font-bold text-gray-900 dark:text-black">
-                                    Coffee Chats
-                                </h3>
-                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">
-                                    Signups from ___ to ___
-                                </h4>
-                                <p class="mb-4 text-base font-normal text-black-500 dark:text-black-400">
-                                    Want to learn more about PBL, the overall business club scene at Berkeley, 
-                                    tips to get into Haas, or our favorite hobbies? Register for a coffee chat 
-                                    and be paired with a PBL officer who will answer all your academic, professional, 
-                                    or personal questions in this casual networking opportunity. 
-                                    Coffee chats will be available till September 25th.</p>
-                                
-                                    <button
-                                        onclick="window.location.href='coffeechat.html';"
-                                        class="mx-auto w-fit ease-in duration-150 active:scale-95 border-[1.5px] p-2 px-4 font-semibold 
-                                        border-[#27589D] text-[#27589D] bg-white hover:bg-[#2e5a9a] hover:text-white hover:border-[#27589D]">
-                                        View Airtable
-                                    </button>
-                                </p>    
-                            </li>
-                            <li class="mb-10 ms-4">
-                                <div
-                                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                                </div>
-                                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 30
-                                    2024</time>
-                                <h3 class="text-3xl font-bold text-gray-900 dark:text-black">
-                                    Info Session 1
-                                </h3>
-                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">
-                                    Final Location TBD
-                                </h4>
-                                <p class="mb-4 text-base font-normal text-black-500 dark:text-black-400">
-                                    Come out to our first info session to learn more about our organization, 
-                                    our personal approach to professional development, and our favorite PBL memories 
-                                    and achievements! In addition, attendees will have the opportunity to network 
-                                    with current PBL officers.
+
+                    <!-- Timeline Container -->
+                    <div>
+                        <!-- Coffee Chats -->
+                        <div class="grid grid-cols-12 items-start gap-4 mb-6">
+                            <div class="col-span-2 text-right pr-4">
+                                <time class="text-lg font-normal text-[#5a7fb3] dark:text-[#5a7fb3]">August 30 2024</time>
+
+                            </div>
+                            <div class="col-span-1 flex justify-center relative">
+                                <div class="h-6 w-6 rounded-full bg-gray-200 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                                <div class="absolute top-6 h-64 w-1 bg-gray-300"></div>
+                            </div>
+                            <div class="col-span-9 -mt-1">
+                                <h3 class="text-3xl font-bold text-gray-900 dark:text-black">Coffee Chats</h3>
+                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">Signups from ___ to ___</h4>
+                                <p class="w-7/8 mb-4 text-base font-normal text-black-500 dark:text-black-400">
+                                    Want to learn more about PBL, the overall business club scene at Berkeley, tips to get into Haas, or our favorite hobbies? Register for a coffee chat and be paired with a PBL officer who will answer all your academic, professional, or personal questions in this casual networking opportunity. Coffee chats will be available till September 25th.
                                 </p>
-                            </li>
-                            <li class="mb-10 ms-4">
-                                <div
-                                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                                </div>
-                                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 30
-                                    2024</time>
-                                <h3 class="text-3xl font-bold text-gray-900 dark:text-black">
-                                    Infosession 2
-                                </h3>
-                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">
-                                    Final Location TBD
-                                </h4>
-                                <p class="mb-4 text-base font-normal text-black-500 dark:text-black-400">
-                                    Come out to our second info session to learn more about our organization, 
-                                    our personal approach to professional development, and our favorite PBL memories 
-                                    and achievements! In addition, attendees will have the opportunity to network with 
-                                    current PBL officers.
+                                <button onclick="window.location.href='coffeechat.html';" 
+                                    class="w-fit ease-in duration-150 active:scale-95 border-[1.5px] p-2 px-4 font-semibold border-[#27589D] text-[#27589D] bg-white hover:bg-[#2e5a9a] hover:text-white hover:border-[#27589D]">
+                                    View Airtable
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Info Session 1 -->
+                        <div class="grid grid-cols-12 items-start gap-4 mb-6">
+                            <div class="col-span-2 text-right pr-4">
+                                <time class="text-lg font-normal text-[#5a7fb3] dark:text-[#5a7fb3]">August 30 2024</time>
+
+                            </div>
+                            <div class="col-span-1 flex justify-center relative">
+                                <div class="h-6 w-6 rounded-full bg-gray-200 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                                <div class="absolute top-6 h-64 w-1 bg-gray-300"></div>
+                            </div>
+                            <div class="col-span-9 -mt-1">
+                                <h3 class="text-3xl font-bold text-gray-900 dark:text-black">Info Session 1</h3>
+                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">Final Location TBD</h4>
+                                <p class="w-7/8 mb-4 text-base font-normal text-black-500 dark:text-black-400">
+                                    Come out to our first info session to learn more about our organization, our personal approach to professional development, and our favorite PBL memories and achievements! In addition, attendees will have the opportunity to network with current PBL officers.
                                 </p>
-                            </li>
-                            <li class="mb-10 ms-4">
-                                <div
-                                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                                </div>
-                                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 30
-                                    2024</time>
-                                <h3 class="text-3xl font-bold text-gray-900 dark:text-black">
-                                    Social Mixer
-                                </h3>
-                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">
-                                    Final Location TBD
-                                </h4>
-                                <p class="mb-4 text-base font-normal text-black-500 dark:text-black-400">
-                                    Come out to our Social Mixer to meet the PBL officer team in a more casual setting. 
-                                    Whether you have remaining questions about our organization, want to meet any of our 
-                                    wonderful PBL officers, or just hope to leave a lasting impression before applications 
-                                    are due, PBL's Social Mixer is your last and best opportunity to do so.
+                            </div>
+                        </div>
+
+                        <!-- Info Session 2 -->
+                        <div class="grid grid-cols-12 items-start gap-4 mb-6">
+                            <div class="col-span-2 text-right pr-4">
+                                <time class="text-lg font-normal text-[#5a7fb3] dark:text-[#5a7fb3]">August 30 2024</time>
+
+                            </div>
+                            <div class="col-span-1 flex justify-center relative">
+                                <div class="h-6 w-6 rounded-full bg-gray-200 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                                <div class="absolute top-6 h-64 w-1 bg-gray-300"></div>
+                            </div>
+                            <div class="col-span-9 -mt-1">
+                                <h3 class="text-3xl font-bold text-gray-900 dark:text-black">Info Session 2</h3>
+                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">Final Location TBD</h4>
+                                <p class="w-7/8 mb-4 text-base font-normal text-black-500 dark:text-black-400">
+                                    Come out to our second info session to learn more about our organization, our personal approach to professional development, and our favorite PBL memories and achievements! In addition, attendees will have the opportunity to network with current PBL officers.
                                 </p>
-                            </li>
-                            <li class="mb-10 ms-4">
-                                <div
-                                    class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700">
-                                </div>
-                                <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">August 30
-                                    2024</time>
-                                <h3 class="text-3xl font-bold text-gray-900 dark:text-black">
+                            </div>
+                        </div>
+
+                        <!-- Social Mixer -->
+                        <div class="grid grid-cols-12 items-start gap-4 mb-6">
+                            <div class="col-span-2 text-right pr-4">
+                                <time class="text-lg font-normal text-[#5a7fb3] dark:text-[#5a7fb3]">August 30 2024</time>
+
+                            </div>
+                            <div class="col-span-1 flex justify-center relative">
+                                <div class="h-6 w-6 rounded-full bg-gray-200 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                                <div class="absolute top-6 h-48 w-1 bg-gray-300"></div>
+                            </div>
+                            <div class="col-span-9 -mt-1">
+                                <h3 class="text-3xl font-bold text-gray-900 dark:text-black">Social Mixer</h3>
+                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">Final Location TBD</h4>
+                                <p class="w-7/8 mb-4 text-base font-normal text-black-500 dark:text-black-400">
+                                    Come out to our Social Mixer to meet the PBL officer team in a more casual setting. Whether you have remaining questions about our organization, want to meet any of our wonderful PBL officers, or just hope to leave a lasting impression before applications are due, PBL's Social Mixer is your last and best opportunity to do so.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Application Due -->
+                        <div class="grid grid-cols-12 items-start gap-4 mb-6">
+                            <div class="col-span-2 text-right pr-4">
+                                <time class="text-lg font-normal text-[#5a7fb3] dark:text-[#5a7fb3]">August 30 2024</time>
+
+                            </div>
+                            <div class="col-span-1 flex justify-center relative">
+                                <div class="h-6 w-6 rounded-full bg-gray-200 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                                <!-- Remove the line from the last item -->
+                                <div class="absolute top-6 h-48 w-1 bg-gray-300"></div>
+                            </div>
+                            <div class="col-span-9 -mt-1">
+                                <h3 class="text-3xl font-bold text-gray-900 dark:text-black">Application Due</h3>
+                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">Apply By ____</h4>
+                                <p class="w-7/8 mb-4 text-base font-normal text-black-500 dark:text-black-400">
+                                    Want to learn more about PBL, the overall business club scene at Berkeley, tips to get into Haas, or our favorite hobbies? Register for a coffee chat and be paired with a PBL officer who will answer all your academic, professional, or personal questions in this casual networking opportunity. Coffee chats will be available till September 25th.
+                                </p>
+                                <button onclick="document.getElementById('fall-2024-clients').scrollIntoView({ behavior: 'smooth' });"
+                                    class="w-fit ease-in duration-150 active:scale-95 border-[1.5px] p-2 px-4 font-semibold border-[#27589D] text-[#27589D] bg-white hover:bg-[#2e5a9a] hover:text-white hover:border-[#27589D]">
                                     Application Due
-                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">
-                                    Apply By ____
-                                </h4>
-                                <p class="mb-4 text-base font-normal text-black-500 dark:text-black-400">
-                                    Want to learn more about PBL, the overall business club scene at Berkeley, 
-                                    tips to get into Haas, or our favorite hobbies? Register for a coffee chat 
-                                    and be paired with a PBL officer who will answer all your academic, professional, 
-                                    or personal questions in this casual networking opportunity. 
-                                    Coffee chats will be available till September 25th.</p>
-                                
-                                    <button
-                                        onclick="document.getElementById('fall-2024-clients').scrollIntoView({ behavior: 'smooth' });"
-                                        class="mx-auto w-fit ease-in duration-150 active:scale-95 border-[1.5px] p-2 px-4 font-semibold 
-                                        border-[#27589D] text-[#27589D] bg-white hover:bg-[#2e5a9a] hover:text-white hover:border-[#27589D]">
-                                        Application Due
-                                    </button>
-                                </p>    
-                            </li>
-                        </ol>
+                                </button>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- FAQs -->
                     <div class="bg-white p-8 mx-auto text-center w-fit space-y-2">
                         <p class="text-3xl md:text-4xl font-bold">FREQUENTLY ASKED QUESTIONS</p>
                     </div>
-                    
+
+                    <!-- Recruitment Events -->
                     <div class="flex flex-col gap-4">
-                        
                         <div>
-                            
                             <div class="text-center space-y-2">
                                 <p class="text-2xl font-semibold">Recruitment Events</p>
                                 <p>Learn more about info sessions, coffee chats and our recruitment process</p>
@@ -385,10 +404,12 @@
                                 <div id="accordion-color">
                                     <h2 id="accordion-color-heading-1">
                                         <button type="button"
-                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
+                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 
+                                            border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 
+                                            dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
                                             data-accordion-target="#accordion-color-body-1" aria-expanded="true"
                                             aria-controls="accordion-color-body-1">
-                                            <span>Where can I learn more?</span>
+                                            <span>What events does PBL hold?</span>
                                             <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -399,11 +420,8 @@
                                     <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
                                         <div
                                             class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library
-                                                of
-                                                interactive components built on top of Tailwind CSS including buttons,
-                                                dropdowns,
-                                                modals, navbars, and more.</p>
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">We have two info sessions, Women’s night, 
+                                                and Social Mixer - you can read about these here (link to above where the timeline has the blurbs)</p>
                                             <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a
                                                     href="/docs/getting-started/introduction/"
                                                     class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and
