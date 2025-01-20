@@ -277,8 +277,18 @@
             <div id="scroll-target" class="bg-white p-4 py-10">
                 <div class="bg-white p-4 py-20 ">
                     <div class="flex flex-col md:flex-row items-center justify-center mx-auto w-fit gap-20">
-                        <div class="md:w-[500px] w-[300px] h-auto overflow-hidden">
-                            <img src="homeAsset/pic1.png" alt="" class="w-[900px] object-cover">
+                        <div class="zoom-hover overflow-hidden text-center">
+                            <div class="relative overflow-hidden pb-[56.25%] w-full max-w-[600px] mx-auto">
+                                <!-- Aspect ratio 16:9 (56.25% is 9/16 in percentage) -->
+                                <iframe 
+                                    src="https://drive.google.com/file/d/1lyzG79cR5VN1XN2ON9rdHeqD3SFqVPUV/preview" 
+                                    class="absolute top-0 left-0 w-full h-full" alt="" 
+                                    allow="autoplay; encrypted-media" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+    
+                            <p class="mt-4 text-sm text-gray-700"> Discover why PBL is the best choice for you by watching our Fall 2024 Recruitment Video! </p>
                         </div>
                         <div class="md:w-1/3 space-y-6 px-4">
                             <p class="font-bold text-3xl text-center md:text-left md:text-5xl text-black">WHO WE ARE</p>
@@ -362,6 +372,11 @@
             <!-- Why Us Section -->
             <div class="bg-white p-4 py-20 ">
                 <div class="flex flex-col md:flex-row items-center justify-center mx-auto w-fit gap-20 pb-20">
+                    <!-- photo -->
+                    <div class="zoom-hover overflow-hidden">
+                       <img src="homeAsset/pic1.png" alt="" class="w-[600px] object-cover">
+                    </div>
+                    <!-- text (i did switch the placements so that they were alternating, consider switching the pres message as well then) -->
                     <div class="md:w-1/3 px-4 space-y-6">
                         <p class="font-bold text-3xl md:text-5xl text-center md:text-left text-[#09082B]"><!--Why PBL ?--> WHY US?</p>
                         <p class="w-fit">
@@ -376,22 +391,7 @@
                             having fun.
                         </p>
                     </div>
-                    <!-- <div class="zoom-hover overflow-hidden">
-                        <img src="homeAsset/pic3.png" class="resize w-[200px] md:w-[450px]" alt="">
-                    </div> -->
-                    <div class="zoom-hover overflow-hidden text-center">
-                        <div class="relative overflow-hidden pb-[56.25%] w-full max-w-[600px] mx-auto">
-                            <!-- Aspect ratio 16:9 (56.25% is 9/16 in percentage) -->
-                            <iframe 
-                                src="https://drive.google.com/file/d/1lyzG79cR5VN1XN2ON9rdHeqD3SFqVPUV/preview" 
-                                class="absolute top-0 left-0 w-full h-full" alt="" 
-                                allow="autoplay; encrypted-media" 
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-
-                        <p class="mt-4 text-sm text-gray-700"> Discover why PBL is the best choice for you by watching our Fall 2024 Recruitment Video! </p>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -399,13 +399,7 @@
              <div class="bg-[#D6DDE5] pt-0">
                 <div class="container mx-auto px-4">
                     <div class="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto">
-                        <!-- President Image -->
-                        <div class="zoom-hover overflow-hidden md:w-1/3">
-                            <img src="homeAsset/pic3.png" 
-                                 class="w-0 md:w-full md:max-w-[500px] object-contain" 
-                                 alt="President">
-                        </div>
-                        
+                       
                         <!-- Message Content - Now aligned to bottom -->
                         <div class="md:w-1/2 space-y-6 pb-20 md:pb-14 flex flex-col justify-end">
                             <div>
@@ -435,7 +429,15 @@
                                 </div>
                                 <!-- <img src="assets/sig.png" class="hidden md:block md:w-96 mt-4" alt="Signature"> -->
                             </div>
+                        </div> 
+
+                        <!-- President Image -->
+                        <div class="zoom-hover overflow-hidden md:w-1/3">
+                            <img src="homeAsset/pic3.png" 
+                                 class="w-0 md:w-full md:max-w-[500px] object-contain" 
+                                 alt="President">
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -457,7 +459,7 @@
                 <a href="https://www.linkedin.com/in/anujpanta/" target="_blank" class="text-blue-500 hover:underline">Anuj Panta</a> and 
                 <a href="https://docs.google.com/document/d/1bB7OLM9zTqncb5rQPgwfBT18dJ_7wvIVHYBaguVL0bk/edit?usp=sharing" target="_blank" class="text-blue-500 hover:underline">PBL's Website Development Team</a>. 
             </p>
-            <p class="text-sm">&copy; PBL 2024</p>
+            <p class="text-sm">&copy; PBL 2025</p>
         </div>
         </footer>
     </body>
