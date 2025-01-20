@@ -65,28 +65,30 @@
             }
         });
     </script>
+    
     <script>
-        document.querySelectorAll('[data-accordion-target]').forEach(button => {
-            button.addEventListener('click', () => {
-                const targetId = button.getAttribute('data-accordion-target');
-                const targetElement = document.querySelector(targetId);
-    
-                if (targetElement) {
-                    // Toggle the hidden class
-                    targetElement.classList.toggle('hidden');
-    
-                    // Update the aria-expanded attribute
-                    const isExpanded = targetElement.classList.contains('hidden');
-                    button.setAttribute('aria-expanded', !isExpanded);
-    
-                    // Rotate the icon
-                    const icon = button.querySelector('svg');
-                    if (icon) {
-                        icon.classList.toggle('rotate-180');
-                    }
-                }
+        window.onload = function () {
+            document.getElementById("menuButton").addEventListener("click", () => {
+                document.getElementById("mobile-menu").classList.toggle("hidden")
             });
-        });
+            const accordionItems = document.querySelectorAll('[data-accordion-target]');
+            accordionItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    const target = document.querySelector(this.getAttribute('data-accordion-target'));
+
+                    // Toggle the visibility of the target content
+                    target.classList.toggle('hidden');
+
+                    // Toggle the icon rotation
+                    const icon = this.querySelector('[data-accordion-icon]');
+                    icon.classList.toggle('rotate-180');
+
+                    // Manage the aria-expanded attribute
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                });
+            });
+        }
     </script>
     
 </head>
@@ -265,16 +267,17 @@
                     <!-- Bottom Bracket -->
                     <div class="absolute bottom-0 right-0 w-10 h-8 border-b-4 border-r-4 border-yellow-500"></div>
                     
-                <section id="fall-2024-clients" class="my-10 px-6">
+                <section id="fall-2024-clients" class="my-5 px-6">
                     <!-- COMPLETED CONTAINER HERE -->
                 
                     <!-- Recruitment Timeline -->
-                <div class="bg-white px-12 py-8">
+                <div class="bg-white px-12 py-4">
                     <div class="bg-white p-12 mx-auto text-center w-fit space-y-4">
                         <p class="text-4xl font-bold">RECRUITMENT TIMELINE</p> <!--changed from semi bold -->
                         <p>Fill out this form to be added to our mailing list for recruitment-related events </p>
+                        <!-- will need to change this button to linkage  -->
                         <button
-                            onclick="document.getElementById('fall-2024-clients').scrollIntoView({ behavior: 'smooth' });"
+                            onclick="document.getElementById('fall-2024-clients').scrollIntoView({ behavior: 'smooth' });" 
                             class="mx-auto w-fit ease-in duration-150 active:scale-95 border-[1.5px] p-2 px-4 font-semibold 
                             border-[#27589D] text-[#27589D] bg-white hover:bg-[#2e5a9a] hover:text-white hover:border-[#27589D]">
                             Interest Form
@@ -286,7 +289,7 @@
                         <!-- Coffee Chats -->
                         <div class="grid grid-cols-12 items-start gap-4 mb-6">
                             <div class="col-span-2 text-right pr-4">
-                                <time class="text-lg font-normal text-[#5a7fb3] dark:text-[#5a7fb3]">August 30 2024</time>
+                                <time class="text-lg font-semibold text-[#5a7fb3] dark:text-[#5a7fb3]">January 21</time>
 
                             </div>
                             <div class="col-span-1 flex justify-center relative">
@@ -295,7 +298,7 @@
                             </div>
                             <div class="col-span-9 -mt-1">
                                 <h3 class="text-3xl font-bold text-gray-900 dark:text-black">Coffee Chats</h3>
-                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">Signups from ___ to ___</h4>
+                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">Signups from 1/21 to 1/30</h4>
                                 <p class="w-7/8 mb-4 text-base font-normal text-black-500 dark:text-black-400">
                                     Want to learn more about PBL, the overall business club scene at Berkeley, tips to get into Haas, or our favorite hobbies? Register for a coffee chat and be paired with a PBL officer who will answer all your academic, professional, or personal questions in this casual networking opportunity. Coffee chats will be available till September 25th.
                                 </p>
@@ -309,7 +312,7 @@
                         <!-- Info Session 1 -->
                         <div class="grid grid-cols-12 items-start gap-4 mb-6">
                             <div class="col-span-2 text-right pr-4">
-                                <time class="text-lg font-normal text-[#5a7fb3] dark:text-[#5a7fb3]">August 30 2024</time>
+                                <time class="text-lg font-semibold text-[#5a7fb3] dark:text-[#5a7fb3]">January 24 <br>8-10pm</time>
 
                             </div>
                             <div class="col-span-1 flex justify-center relative">
@@ -325,10 +328,29 @@
                             </div>
                         </div>
 
+                        <!-- Women in Business -->
+                        <div class="grid grid-cols-12 items-start gap-4 mb-6">
+                            <div class="col-span-2 text-right pr-4">
+                                <time class="text-lg font-semibold text-[#5a7fb3] dark:text-[#5a7fb3]">January 29 <br>8-10pm </time>
+
+                            </div>
+                            <div class="col-span-1 flex justify-center relative">
+                                <div class="h-6 w-6 rounded-full bg-gray-200 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                                <div class="absolute top-6 h-64 w-1 bg-gray-300"></div>
+                            </div>
+                            <div class="col-span-9 -mt-1">
+                                <h3 class="text-3xl font-bold text-gray-900 dark:text-black">Women in Business</h3>
+                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">Final Location TBD</h4>
+                                <p class="w-7/8 mb-4 text-base font-normal text-black-500 dark:text-black-400">
+                                    TO FILL IN Come out to our second info session to learn more about our organization, our personal approach to professional development, and our favorite PBL memories and achievements! In addition, attendees will have the opportunity to network with current PBL officers.
+                                </p>
+                            </div>
+                        </div>
+
                         <!-- Info Session 2 -->
                         <div class="grid grid-cols-12 items-start gap-4 mb-6">
                             <div class="col-span-2 text-right pr-4">
-                                <time class="text-lg font-normal text-[#5a7fb3] dark:text-[#5a7fb3]">August 30 2024</time>
+                                <time class="text-lg font-semibold text-[#5a7fb3] dark:text-[#5a7fb3]">January 30 <br>8-10pm</time>
 
                             </div>
                             <div class="col-span-1 flex justify-center relative">
@@ -347,7 +369,7 @@
                         <!-- Social Mixer -->
                         <div class="grid grid-cols-12 items-start gap-4 mb-6">
                             <div class="col-span-2 text-right pr-4">
-                                <time class="text-lg font-normal text-[#5a7fb3] dark:text-[#5a7fb3]">August 30 2024</time>
+                                <time class="text-lg font-semibold text-[#5a7fb3] dark:text-[#5a7fb3]">January 31 <br>7-9pm</time>
 
                             </div>
                             <div class="col-span-1 flex justify-center relative">
@@ -356,7 +378,7 @@
                             </div>
                             <div class="col-span-9 -mt-1">
                                 <h3 class="text-3xl font-bold text-gray-900 dark:text-black">Social Mixer</h3>
-                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">Final Location TBD</h4>
+                                <h4 class="mb-4 text-lg font-semibold text-gray-500 dark:text-gray-400">Haas Courtyard</h4>
                                 <p class="w-7/8 mb-4 text-base font-normal text-black-500 dark:text-black-400">
                                     Come out to our Social Mixer to meet the PBL officer team in a more casual setting. Whether you have remaining questions about our organization, want to meet any of our wonderful PBL officers, or just hope to leave a lasting impression before applications are due, PBL's Social Mixer is your last and best opportunity to do so.
                                 </p>
@@ -366,7 +388,7 @@
                         <!-- Application Due -->
                         <div class="grid grid-cols-12 items-start gap-4 mb-6">
                             <div class="col-span-2 text-right pr-4">
-                                <time class="text-lg font-normal text-[#5a7fb3] dark:text-[#5a7fb3]">August 30 2024</time>
+                                <time class="text-lg font-semibold text-[#5a7fb3] dark:text-[#5a7fb3]">January 31 <br>9:00pm</time>
 
                             </div>
                             <div class="col-span-1 flex justify-center relative">
@@ -393,23 +415,36 @@
                         <p class="text-3xl md:text-4xl font-bold">FREQUENTLY ASKED QUESTIONS</p>
                     </div>
 
-                    <!-- Recruitment Events -->
+                    <!-- Main Recruitment Events Section Container -->
                     <div class="flex flex-col gap-4">
+                        <!-- Header Section -->
                         <div>
+                            <!-- Title and Description Container -->
                             <div class="text-center space-y-2">
+                                <!-- Main Heading -->
                                 <p class="text-2xl font-semibold">Recruitment Events</p>
-                                <p>Learn more about info sessions, coffee chats and our recruitment process</p>
+                                <!-- Subheading/Description -->
+                                <p>Learn more about info sessions, coffee chats, and our recruitment process</p>
                             </div>
+
+                            <!-- Accordion Section -->
                             <div class="py-8">
+                                <!-- Accordion Container -->
                                 <div id="accordion-color">
+
+                                    <!-- First Accordion Item -->
                                     <h2 id="accordion-color-heading-1">
+                                        <!-- Accordion Button/Header -->
                                         <button type="button"
                                             class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 
-                                            border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 
-                                            dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                                            data-accordion-target="#accordion-color-body-1" aria-expanded="true"
+                                            border border-b-0 border-gray-200 rounded-t-xl 
+                                            dark:border-gray-700 dark:text-gray-400 hover:bg-[#2e5a9a] hover:border-[#2e5a9a] hover:text-white gap-3"
+                                            data-accordion-target="#accordion-color-body-1" 
+                                            aria-expanded="true"
                                             aria-controls="accordion-color-body-1">
+                                            <!-- Accordion Title -->
                                             <span>What events does PBL hold?</span>
+                                            <!-- Dropdown Arrow Icon -->
                                             <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
                                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -417,120 +452,210 @@
                                             </svg>
                                         </button>
                                     </h2>
+                                    <!-- First Accordion Content Panel -->
                                     <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
-                                        <div
-                                            class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                                            <p class="mb-2 text-gray-500 dark:text-gray-400">We have two info sessions, Women’s night, 
-                                                and Social Mixer - you can read about these here (link to above where the timeline has the blurbs)</p>
-                                            <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a
-                                                    href="/docs/getting-started/introduction/"
-                                                    class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and
-                                                start
-                                                developing websites even faster with components on top of Tailwind CSS.</p>
-                                        </div>
-                                    </div>
-                                    <h2 id="accordion-color-heading-2">
-                                        <button type="button"
-                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                                            data-accordion-target="#accordion-color-body-2" aria-expanded="false"
-                                            aria-controls="accordion-color-body-2">
-                                            <span>What committee should I join?</span>
-                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                                            </svg>
-                                        </button>
-                                    </h2>
-                                    <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
                                         <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized
-                                                and
-                                                designed using the Figma software so everything you see in the library has a
-                                                design
-                                                equivalent in our Figma file.</p>
-                                            <p class="text-gray-500 dark:text-gray-400">Check out the <a
-                                                    href="https://flowbite.com/figma/"
-                                                    class="text-blue-600 dark:text-blue-500 hover:underline">Figma design
-                                                    system</a>
-                                                based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-                                        </div>
-                                    </div>
-                                    <h2 id="accordion-color-heading-3">
-                                        <button type="button"
-                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                                            data-accordion-target="#accordion-color-body-3" aria-expanded="false"
-                                            aria-controls="accordion-color-body-3">
-                                            <span>Do I need to go to both info sessions?</span>
-                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                                            </svg>
-                                        </button>
-                                    </h2>
-                                    <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
-                                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                                            <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized
-                                                and
-                                                designed using the Figma software so everything you see in the library has a
-                                                design
-                                                equivalent in our Figma file.</p>
-                                            <p class="text-gray-500 dark:text-gray-400">Check out the <a
-                                                    href="https://flowbite.com/figma/"
-                                                    class="text-blue-600 dark:text-blue-500 hover:underline">Figma design
-                                                    system</a>
-                                                based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-                                        </div>
-                                    </div>
-                                    <h2 id="accordion-color-heading-5">
-                                        <button type="button"
-                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800 gap-3"
-                                            data-accordion-target="#accordion-color-body-3" aria-expanded="false"
-                                            aria-controls="accordion-color-body-5">
-                                            <span>Can I sign up for more than one coffee chat?</span>
-                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
-                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                                    stroke-width="2" d="M9 5 5 1 1 5" />
-                                            </svg>
-                                        </button>
-                                    </h2>
-                                    <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
-                                        <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-                                            <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the
-                                                core
-                                                components from Flowbite are open source under the MIT license, whereas Tailwind
-                                                UI
-                                                is a
-                                                paid product. Another difference is that Flowbite relies on smaller and
-                                                standalone
-                                                components, whereas Tailwind UI offers sections of pages.</p>
-                                            <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend
-                                                using
-                                                both
-                                                Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason
-                                                stopping
-                                                you from using the best of two worlds.</p>
-                                            <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these
-                                                technologies:
-                                            </p>
-                                            <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
-                                                <li><a href="https://flowbite.com/pro/"
-                                                        class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite
-                                                        Pro</a>
-                                                </li>
-                                                <li><a href="https://tailwindui.com/" rel="nofollow"
-                                                        class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a>
-                                                </li>
-                                            </ul>
+                                            <!-- Accordion Content -->
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">We have two info sessions, Women’s night, and Social Mixer 
+                                                - you can read about these here (link to above where the timeline has the blurbs)</p>
                                         </div>
                                     </div>
 
-                                    <!-- Repeat similar structure for other accordion items -->
+                                    <!-- Second Accordion Item -->
+                                    <h2 id="accordion-color-heading-2">
+                                        <!-- Accordion Button/Header -->
+                                        <button type="button"
+                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 
+                                            border border-b-0 border-gray-200  
+                                            dark:border-gray-700 dark:text-gray-400 hover:bg-[#2e5a9a] hover:border-[#2e5a9a] hover:text-white gap-3"
+                                            data-accordion-target="#accordion-color-body-2" 
+                                            aria-expanded="true"
+                                            aria-controls="accordion-color-body-2">
+                                            <!-- Accordion Title -->
+                                            <span>Is attendance mandatory?
+                                            </span>
+                                            <!-- Dropdown Arrow Icon -->
+                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <!-- Second Accordion Content Panel -->
+                                    <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
+                                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                                            <!-- Accordion Content -->
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">Attendance is not mandatory, but we highly recommend coming to 
+                                                one info session and our social mixer so you know what you’re applying to and can see if we’ll be the right fit 
+                                                for you!
+                                            </p>
+                                        </div>
+                                    </div>
+                                
+                                     <!-- Third Accordion Item -->
+                                    <h2 id="accordion-color-heading-3">
+                                        <!-- Accordion Button/Header -->
+                                        <button type="button"
+                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 
+                                            border border-b-0 border-gray-200  
+                                            dark:border-gray-700 dark:text-gray-400 hover:bg-[#2e5a9a] hover:border-[#2e5a9a] hover:text-white gap-3"
+                                            data-accordion-target="#accordion-color-body-3" 
+                                            aria-expanded="true"
+                                            aria-controls="accordion-color-body-3">
+                                            <!-- Accordion Title -->
+                                            <span>Do I need to go to both info sessions?
+                                            </span>
+                                            <!-- Dropdown Arrow Icon -->
+                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <!-- Third Accordion Content Panel -->
+                                    <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
+                                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                                            <!-- Accordion Content -->
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">While you’re free to attend both info sessions, you definitely don’t 
+                                                need to! The same information is covered in the two info sessions, so you won’t be hearing anything new 
+                                                in the presentation.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Fourth Accordion Item -->
+                                    <h2 id="accordion-color-heading-4">
+                                        <!-- Accordion Button/Header -->
+                                        <button type="button"
+                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 
+                                            border border-b-0 border-gray-200  
+                                            dark:border-gray-700 dark:text-gray-400 hover:bg-[#2e5a9a] hover:border-[#2e5a9a] hover:text-white gap-3"
+                                            data-accordion-target="#accordion-color-body-4" 
+                                            aria-expanded="true"
+                                            aria-controls="accordion-color-body-4">
+                                            <!-- Accordion Title -->
+                                            <span>What’s the dress code?
+                                            </span>
+                                            <!-- Dropdown Arrow Icon -->
+                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <!-- Fourth Accordion Content Panel -->
+                                    <div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-4">
+                                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                                            <!-- Accordion Content -->
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">All of the open recruitment events have no dress code! 
+                                                While you will see our officers in business attire, we recommend coming in your comfortable campus casual attire.
+                                            </p>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Fifth Accordion Item -->
+                                    <h2 id="accordion-color-heading-5">
+                                        <!-- Accordion Button/Header -->
+                                        <button type="button"
+                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 
+                                            border border-b-0 border-gray-200  
+                                            dark:border-gray-700 dark:text-gray-400 hover:bg-[#2e5a9a] hover:border-[#2e5a9a] hover:text-white gap-3"
+                                            data-accordion-target="#accordion-color-body-5" 
+                                            aria-expanded="true"
+                                            aria-controls="accordion-color-body-5">
+                                            <!-- Accordion Title -->
+                                            <span>What do I need to bring to the recruitment events?
+
+                                            </span>
+                                            <!-- Dropdown Arrow Icon -->
+                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <!-- Fifth Accordion Content Panel -->
+                                    <div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
+                                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                                            <!-- Accordion Content -->
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">Just bringing yourself and your phone should be plenty! 
+                                                Feel free to bring your backpack if you’re coming straight from class or another event, but there’s 
+                                                no need to prepare anything for any of our recruitment events!
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Sixth Accordion Item -->
+                                    <h2 id="accordion-color-heading-6">
+                                        <!-- Accordion Button/Header -->
+                                        <button type="button"
+                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 
+                                            border border-b-0 border-gray-200  
+                                            dark:border-gray-700 dark:text-gray-400 hover:bg-[#2e5a9a] hover:border-[#2e5a9a] hover:text-white gap-3"
+                                            data-accordion-target="#accordion-color-body-6" 
+                                            aria-expanded="true"
+                                            aria-controls="accordion-color-body-6">
+                                            <!-- Accordion Title -->
+                                            <span>What is a coffee chat?
+                                            </span>
+                                            <!-- Dropdown Arrow Icon -->
+                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <!-- Sixth Accordion Content Panel -->
+                                    <div id="accordion-color-body-6" class="hidden" aria-labelledby="accordion-color-heading-6">
+                                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                                            <!-- Accordion Content -->
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">After you sign up for a coffee chat, one of your top two choices 
+                                                will reach out to set up a quick chat with you to help you learn more about our club, or anything else 
+                                                you’d want advice about! These can be application-related, club life-related, work-related, or just general advice 
+                                                if that’s what you’re looking for!
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                     <!-- Seventh Accordion Item -->
+                                    <h2 id="accordion-color-heading-7">
+                                        <!-- Accordion Button/Header -->
+                                        <button type="button"
+                                            class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 
+                                            border border-gray-200  
+                                            dark:border-gray-700 dark:text-gray-400 hover:bg-[#2e5a9a] hover:border-[#2e5a9a] hover:text-white gap-3"
+                                            data-accordion-target="#accordion-color-body-7" 
+                                            aria-expanded="true"
+                                            aria-controls="accordion-color-body-7">
+                                            <!-- Accordion Title -->
+                                            <span>What do I need to bring to a coffee chat?
+                                            </span>
+                                            <!-- Dropdown Arrow Icon -->
+                                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2" d="M9 5 5 1 1 5" />
+                                            </svg>
+                                        </button>
+                                    </h2>
+                                    <!-- Seventh Accordion Content Panel -->
+                                    <div id="accordion-color-body-7" class="hidden" aria-labelledby="accordion-color-heading-7">
+                                        <div class="p-5 border border-gray-200 dark:border-gray-700">
+                                            <!-- Accordion Content -->
+                                            <p class="mb-2 text-gray-500 dark:text-gray-400">No need to bring anything! Feel free to come in casual attire as well.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                        <!-- Repeat similar structure for other accordion items -->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         <div>
                             <div class="text-center space-y-2">
                                 <p class="text-xl font-semibold">Application Events</p>
